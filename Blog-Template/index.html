@@ -1,0 +1,560 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>tailwind-css</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
+</head>
+
+<body class="absolute inset-0 w-auto">
+  <div class="container mx-auto w-full max-w-7xl px-4 lg:px-6">
+    <nav class="flex items-center px-8 py-3 gap-x-3 bg-white text-gray-500">
+      <div class="flex items-center gap-1">
+        <div class="w-12 h-12 -rotate-30"><img src="icons/hat.png"></div>
+        <div id="navLinks" class="ml-auto font-bold text-2xl hover:text-sky-950">TravelTales</div>
+      </div>
+      <div class="ml-10 flex gap-4">
+        <a href="#"
+          class="hover:text-sky-950 hover:underline hover:font-bold hover:underline-offset-4 hidden md:block">Home</a>
+        <a href="#"
+          class="hover:text-sky-950 hover:underline hover:font-bold hover:underline-offset-4 hidden md:block">Posts</a>
+        <a href="#"
+          class="hover:text-sky-950 hover:underline hover:font-bold hover:underline-offset-4 hidden md:block">Articles</a>
+        <a href="#"
+          class="hover:text-sky-950 hover:underline hover:font-bold hover:underline-offset-4 hidden md:block">Lifestyle</a>
+        <a href="#"
+          class="hover:text-sky-950 hover:underline hover:font-bold hover:underline-offset-4 hidden md:block">Dashboard</a>
+      </div>
+      <div class="flex items-center gap-2 ml-auto md:gap-3">
+        <button
+          class="text-white ml-auto bg-red-600 rounded-md px-3 py-1 animate-pulse hidden md:block hover:bg-red-800 hover:animate-none">
+          Subscribe
+        </button>
+        <div class="relative flex items-center">
+          <input id="searchBar" type="text" placeholder="Search..."
+            class="hidden max-w-70 h-9 px-3 rounded-full border border-gray-400 outline-none">
+
+          <button id="searchBtn" class=" hover:bg-gray-100 px-1 py-1 rounded-sm">
+            <img src="icons/search.svg">
+          </button>
+          <button id="closeSearch" class="hidden absolute ml-45"><img src="icons/close.svg" class="w-4 h-4">
+          </button>
+        </div>
+        <div id="menuBtn" class="ml-auto w-6 h-6 block md:hidden  hover:bg-gray-100 rounded-sm">
+          <img src="icons/three-bars.png" class="w-6 h-6">
+        </div>
+      </div>
+    </nav>
+    <div id="mobileMenu"
+      class="hidden fixed  top-4 right-0  w-40 h-70 z-50 bg-black/90 text-white flex-col items-center justify-center">
+      <button id="closeMenu" class="ml-30"><img src="icons/close-btn.png" class="w-6 h-6"></button>
+      <div class="flex flex-col items-start gap-6 text-sm font-bold ml-8">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Posts</a>
+        <a href="#">Articles</a>
+        <a href="#">Lifestyle</a>
+        <a href="#">Dashboard</a>
+      </div>
+    </div>
+    <button
+      class="text-white ml-10 bg-red-600 rounded-md hover:animate-none px-4 py-1  animate-pulse block md:hidden hover:bg-red-800">
+      Subscribe
+    </button>
+    <nav class=" flex items-center justify-between bg-sky-100 w-full h-9">
+      <div class="w-auto">
+        <button class="bg-blue-800 w-25 h-7 ml-10 shrink-0 rounded-sm text-white text-sm">
+          Trending :
+        </button>
+      </div>
+      <div class="w-full text-sm">
+        <marquee width="75%" direction="left">
+          Tokyo: Why everyone is booking trips to Tokyo this season—unbeatable street food, cherry blossoms, and tech
+          culture!
+        </marquee>
+      </div>
+      <div class="flex flex-row gap-2 mr-8">
+        <button><img src="icons/chevron-left.svg" class="shrink-0 w-8 h-8 hover:bg-sky-300 rounded-full"></button>
+        <button><img src="icons/chevron-right.svg" class="shrink-0 w-8 h-8 hover:bg-sky-300 rounded-full"></button>
+      </div>
+    </nav>
+    <div class="w-full px-10">
+      <div class="relative overflow-hidden mt-5">
+        <div id="carousel" class="flex transition-transform duration-500">
+          <div class="relative w-full h-80 shrink-0 rounded-lg overflow-hidden">
+            <img src="icons/rkt.webp" class="w-full h-full rounded-lg object-cover">
+            <div class="absolute inset-0 bg-linear-to-r from-black via-black/50 to-transparent"></div>
+            <div class="absolute inset-0 z-10 px-6 text-white mt-16 ml-10 lg:mr-100 md:mr-60">
+              <span class="font-bold">The Endless White
+                Desert -</span><br>
+              A massive, salt-crusted white desert in Gujarat, India, that transforms from a shallow sea during the
+              monsoon into a glowing silver salt plain under the full moon.
+            </div>
+          </div>
+          <div class="relative w-full h-80 shrink-0 rounded-lg overflow-hidden"><img src="icons/ymn.webp"
+              class="w-full h-full object-cover rounded-lg">
+            <div class="absolute inset-0 bg-linear-to-r from-black via-black/50 to-transparent rounded-lg"></div>
+            <div class="absolute inset-0 z-10 px-6 text-white mt-16 ml-10">
+              <span class="font-bold ">Alien Island -</span><br>
+              Why
+              Socotra Feels Like Step-Footing on Another Planet??<br>Yemen—a surreal lost world where umbrella-shaped
+              trees
+              bleed red resin and one-third of all plant life exists nowhere else on Earth.
+            </div>
+          </div>
+          <div class="relative w-full h-80 shrink-0 rounded-lg overflow-hidden"><img src="icons/gls.webp"
+              class="w-full h-full rounded-lg object-cover">
+            <div class="absolute inset-0 bg-linear-to-r from-black via-black/50 to-transparent rounded-lg"></div>
+            <div class="absolute inset-0 z-10 px-6 text-white mt-16 ml-10">
+              <span class="font-bold">The Giant World Mirror- </span><br>
+              Step onto Salar de Uyuni during the wet season where a glass-like sheet of water creates the world’s
+              largest
+              natural mirror and blurs the line between Earth and heaven..
+            </div>
+          </div>
+          <div class="relative w-full h-80 shrink-0 rounded-lg overflow-hidden"><img src="icons/cave.webp"
+              class="w-full h-full rounded-lg object-cover">
+            <div class="absolute inset-0 bg-linear-to-r from-black via-black/50 to-transparent rounded-lg"></div>
+            <div class="absolute inset-0 z-10 px-6 text-white mt-16 ml-10">
+              <span class="font-bold">Waitomo Glowworm Caves New Zealand -</span><br>
+              a silent subterranean world where thousands of living blue stars drift along cave ceilings, lighting up an
+              underground river like a galaxy buried deep inside the Earth..
+            </div>
+          </div>
+        </div>
+        <button id="prevBtn"
+          class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 text-white px-3 py-2 rounded-full hover:bg-white/50">
+          <img src="icons/chevron-left.svg" class="brightness-0 invert w-6 h-6">
+        </button>
+        <button id="nextBtn"
+          class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 text-white px-3 py-2 rounded-full hover:bg-white/50">
+          <img src="icons/chevron-right.svg" class="brightness-0 invert w-6 h-6">
+        </button>
+      </div>
+      <div class="md:flex items-center justify-between mt-5">
+        <div class="flex items-center gap-1 mt-5 min-w-0">
+          <img src="icons/travelbag.png" class="w-9 h-9">
+          <span class="font-bold md:text-2xl">Travel beyond destinations and discover the stories within.</span>
+        </div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-[60%_216px] gap-4 w-full min-w-0">
+        <div class="flex flex-col gap-3 min-w-0 w-full md:order-2">
+          <div class=" flex gap-3 justify-center lg:flex mt-5 ">
+            <div
+              class="flex md:items-start justify-center pt-1  bg-pink-600 w-12 md:w-16 h-12 md:h-22 rounded-lg bg-linear-to-b from-yellow-200 via-pink-400 to-transparent transition-transform duration-100 hover:scale-110">
+              <button>
+                <img src="icons/Instagram.png" class="w-6 h-6 md:ml-3"><span
+                  class="text-xs mt-2 text-white hidden md:block">2M<br>Followers</span>
+              </button>
+            </div>
+            <div
+              class="flex md:items-start justify-center pt-1 bg-blue-600 w-12 md:w-16 h-12 md:h-22 rounded-lg bg-linear-to-b from-blue-100 via-blue-300 to-transparent transition-transform duration-100 hover:scale-110">
+              <button>
+                <img src="icons/Facebook.png" class="w-6 h-6"><span
+                  class="text-xs mt-2 text-white hidden md:block">50k<br>Fans</span>
+              </button>
+            </div>
+            <div
+              class="flex md:items-start justify-center  pt-1 w-12 md:w-16 h-12 md:h-22  bg-red-600  rounded-lg bg-linear-to-b from-red-300 via-red-400 to-transparent transition-transform duration-100 hover:scale-110">
+              <button>
+                <img src="icons/Youtube.png" class="w-6 h-6"><span
+                  class="text-xs mt-2 text-white hidden md:block">100k<br>Subs</span>
+              </button>
+            </div>
+          </div>
+          <div class="justify-center hidden md:flex">
+            <div class="relative bg-green-600 w-54 h-18 md:h-80 rounded-lg over">
+              <div class="absolute inset-0  bg-linear-to-t from-black via-black/50 to-transparent rounded-lg">
+                <div class="absolute inset-0 bg-linear-to- from-white/40 via-transparent to-transparent rounded-lg">
+                </div>
+                <div class="bg-gray-400 w-25 h-5">
+                  <div class=" flex flex-row items-center gap-17 ">
+                    <div class="text-sm text-white">Ad</div>
+                    <div class="w-3 h-3"><img src="icons/close-btn.png"></div>
+                  </div>
+                </div>
+                <div class="flex flex-col  items-center justify-center">
+                  <div class="flex justify-center text-white text-center mt-10 font-bold text-2xl">Every destination
+                    <br>has
+                    a <br>soundtrack
+                  </div>
+                  <div><img src="icons/spotify-black.png" class="w-10 h-10"></div>
+                  <div><img src="icons/Play.png" class="w-50"></div>
+                  <div><img src="icons/Play_button.png" class="w-30 h-25 -mt-5"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-4  gap-2 md:h-80 md:order-1 mt-5">
+          <div id="sculptures" class="relative  overflow-hidden transition-transform duration-100 hover:scale-105"><img
+              src="icons/sculpture.webp" class="w-full md:h-full h-18 object-cover rounded-lg">
+            <div class="absolute top-0 left-0 w-full h-18 md:h-full
+              bg-linear-to-t from-black via-black/50 to-transparent
+              flex items-end rounded-lg">
+              <span class="text-white font-bold ml-6 mb-4 text-lg">
+                Sculptures
+              </span>
+            </div>
+          </div>
+          <div class="grid grid-rows-2 gap-2">
+            <div id="food" class="relative overflow-hidden transition-transform duration-100 hover:scale-105"><img
+                src="icons/food.webp" class="w-full md:h-full h-18 object-cover rounded-lg">
+              <div class="absolute top-0 left-0 w-full h-18 md:h-full
+              bg-linear-to-t from-black via-black/50 to-transparent
+              flex items-end rounded-lg">
+                <span class="text-white font-bold ml-6 mb-4 text-lg">
+                  Food
+                </span>
+              </div>
+            </div>
+            <div id="cultures" class="relative overflow-hidden transition-transform duration-100 hover:scale-105">
+              <img src="icons/cultures.webp" class="w-full  h-18 md:h-full object-cover rounded-lg">
+              <div class="absolute top-0 left-0 w-full h-18 md:h-full
+              bg-linear-to-t from-black via-black/50 to-transparent
+              flex items-end rounded-lg">
+                <span class="text-white font-bold ml-6 mb-4 text-lg">
+                  Cultures
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="grid grid-rows-2 gap-2">
+            <div id="creatures"
+              class="relative overflow-hidden transition-transform duration-100 hover:scale-105 hidden md:block"><img
+                src="icons/creatures.webp" class="w-full md:h-full h-18 object-cover rounded-lg">
+              <div class="absolute top-0 left-0 w-full h-18 md:h-full
+              bg-linear-to-t from-black via-black/50 to-transparent
+              flex items-end rounded-lg">
+                <span class="text-white font-bold ml-6 mb-4 text-lg">
+                  Creatures
+                </span>
+              </div>
+            </div>
+            <div id="flora"
+              class="relative overflow-hidden transition-transform duration-100 hover:scale-105 hidden md:block">
+              <img src="icons/flora.webp" class="w-full  h-18 md:h-full object-cover rounded-lg">
+              <div class="absolute top-0 left-0 w-full h-18 md:h-full
+              bg-linear-to-t from-black via-black/50 to-transparent
+              flex items-end rounded-lg">
+                <span class="text-white font-bold ml-6 mb-4 text-lg">
+                  Flora & Fauna
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="grid grid-rows-2 gap-2">
+            <div id="adventures"
+              class="relative overflow-hidden transition-transform duration-100 hover:scale-105 hidden md:block">
+              <img src="icons/adv.webp" class="w-full md:h-full h-18 object-cover rounded-lg">
+              <div class="absolute top-0 left-0 w-full h-18 md:h-full
+              bg-linear-to-t from-black via-black/50 to-transparent
+              flex items-end rounded-lg">
+                <span class="text-white font-bold ml-6 mb-4 text-lg">
+                  Adventures
+                </span>
+              </div>
+            </div>
+            <div id="photography"
+              class="relative overflow-hidden transition-transform duration-100 hover:scale-105 hidden md:block">
+              <img src="icons/phgy.webp" class="w-full md:h-full h-18 object-cover rounded-lg">
+              <div class="absolute top-0 left-0 w-full h-18 md:h-full
+              bg-linear-to-t from-black via-black/50 to-transparent
+              flex items-end rounded-lg">
+                <span class="text-white font-bold ml-6 mb-4 text-lg">
+                  Photography
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex justify-center">
+        <button id="downArrow" class="md:hidden"><img src="icons/fold-down.png" class="w-6 h-6"></button>
+        <button id="topArrow" class="hidden md:hidden"><img src="icons/fold-up.png" class="w-6 h-6 mt-2"></button>
+      </div>
+      <div class="flex items-center gap-2 mt-5 min-w-0">
+        <img src="icons/trending.png" class="w-7 h-7">
+        <span class="font-bold md:text-2xl">The Viral Destinations Dominating Every Traveler's Bucket List Right Now:
+          From
+          social feeds to real-life bucket list escapes.</span>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full mt-5">
+        <div class="flex flex-col w-full min-w-0">
+          <div class="flex">
+            <div class="relative w-full h-80 overflow-hidden"><img src="icons/fore-island.webp"
+                class="w-full h-full object-cover rounded-lg">
+              <div class="absolute inset-0">
+                <div class="flex items-center gap-2 bg-amber-950 w-35 h-6 mt-10 ml-4 rounded-sm">
+                  <span class="w-2 h-2 bg-white rounded-full ml-2"></span>
+                  <span class="text-white">Hidden Places</span>
+                </div>
+                <div class="text-white font-bold mt-25 ml-2 mb-2 text-3xl">Off The Beaten Path-<span
+                    class="text-xl ">The
+                    Faroe
+                    Islands in the North Atlantic, Socotra in the Indian Ocean</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="text-black text-sm font-bold leading-6 mt-10">
+            Forget crowded capitals and tourist traps. These two isolated island frontiers are so otherworldly, you’ll
+            double-check your coordinates....
+          </div>
+          <div class="flex flex-row items-center gap-2 p-4 ps-0">
+            <img class="-mt-3 h-10 rounded-full sm:mx-0 sm:shrink-0" src="icons/laura.webp" alt="" />
+            <div class="text-gray-700 text-sm"> by Laura Elizabeth</div>
+            <span class="w-1 h-1 bg-gray-700 rounded-full"></span>
+            <span class="text-gray-600 text-sm ">April 7 2026</span>
+          </div>
+        </div>
+        <div class="flex flex-col w-full min-w-0">
+          <div class="flex">
+            <div class="relative w-full h-80 overflow-hidden"><img src="icons/eagle-hunting.webp"
+                class="w-full h-full object-cover rounded-lg ">
+              <div class="absolute inset-0  bg-linear-to-t from-black via-black/10 to-transparent rounded-lg"></div>
+              <div class="absolute inset-0">
+                <div class="flex items-center gap-2 bg-red-500 w-40 h-6 mt-10 ml-4 rounded-sm">
+                  <span class="w-2 h-2 bg-white rounded-full ml-2"></span>
+                  <span class="text-">Valley Hunters</span>
+                </div>
+                <div class="text-pink-700 font-bold mt-25 ml-2 mb-2 text-3xl">Nomadic eagle hunting-<br><span
+                    class="text-xl">
+                    Cultural partnership between human and bird </span></div>
+              </div>
+            </div>
+          </div>
+          <div class="text-black text-sm font-bold leading-6 mt-10">
+            "‘We do not own the eagle,’ the old Berkutchi told me as we rode into the sub-zero wind. ‘She is a guest in
+            our family...
+          </div>
+          <div class="flex flex-row items-center gap-2 p-4 ps-0">
+            <img class="h-10 rounded-full sm:mx-0 sm:shrink-0" src="icons/Kaelen Finch.webp" alt="" />
+            <div class="text-gray-700 text-sm"> by Kaelen Finch </div>
+            <span class="w-1 h-1 bg-gray-700 rounded-full"></span>
+            <span class="text-gray-600 text-sm ">Feb 2 2025</span>
+          </div>
+        </div>
+        <div class="flex flex-col w-full min-w-0">
+          <div class="flex">
+            <div class="relative w-full h-80 overflow-hidden"><img src="icons/singers.webp"
+                class="w-full h-full object-cover rounded-lg">
+              <div class="absolute inset-0  bg-linear-to-t from-black via-black/50 to-transparent rounded-lg"></div>
+              <div class="absolute inset-0">
+                <div class="flex items-center gap-2 bg-blue-900 w-50 h-6 mt-10 ml-4 rounded-sm">
+                  <span class="w-2 h-2 bg-white rounded-full ml-2"></span>
+                  <span class="text-white">Acoustic Hideaways</span>
+                </div>
+                <div class="text-amber-300 font-bold mt-25 ml-2 mb-2 text-3xl">Echoes of the Altai-<br><span
+                    class="text-xl">Unearthing the Hidden Overtone Singers of Remote Tuva</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="text-black text-sm font-bold leading-6 mt-10">
+            "In Tuva, singing is not done to impress an audience; it is done to communicate with the spirit of the land,
+            the rivers, and the mountains."
+          </div>
+          <div class="flex flex-row items-center gap-2 ps-0">
+            <img class=" h-10 w-10 rounded-full sm:mx-0 sm:shrink-0 object-cover" src="icons/george.webp" alt="" />
+            <div class="text-gray-700 text-sm"> by George William</div>
+            <span class="w-1 h-1 bg-gray-700 rounded-full"></span>
+            <span class="text-gray-600 text-sm ">Dec 11 2024</span>
+          </div>
+        </div>
+        <div class="flex flex-col w-full min-w-0">
+          <div class="flex">
+            <div class="relative w-full h-80"><img src="icons/sunken.webp"
+                class="w-full h-full object-cover rounded-lg">
+              <div class="absolute inset-0">
+                <div class="flex items-center gap-2 bg-pink-600 w-40 h-6 mt-10 ml-4 rounded-sm">
+                  <span class="w-2 h-2 bg-white rounded-full ml-2"></span>
+                  <span class="text-white">Lost Archaeology</span>
+                </div>
+                <div class="text-pink-400 font-bold mt-18 ml-2 mb-2 text-3xl">Underwater Archaeology-<br><span
+                    class="text-xl">The Atlantis of Egypt: Stepping Into the City Buried Beneath the Sea</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="text-black text-sm font-bold leading-6 mt-10">
+            "Before Alexandria was born, Thonis-Heracleion stood as Egypt's bustling gateway to the Mediterranean. Then,
+            around the 8th century AD, cataclysmic earthquakes and liquefaction caused the entire city to collapse into
+            the sea</div>
+          <div class="flex flex-row items-center gap-2 p-4 ps-0">
+            <img class=" h-10 w-10 rounded-full sm:mx-0 sm:shrink-0 object-fit" src="icons/sylvia.webp" alt="" />
+            <div class="text-gray-700 text-sm"> by Sylvia Earlie</div>
+            <span class="w-1 h-1 bg-gray-700 rounded-full"></span>
+            <span class="text-gray-600 text-sm ">Jan 28 2025</span>
+          </div>
+        </div>
+        <div class="flex flex-col w-full min-w-0">
+          <div class="flex">
+            <div class="relative w-full h-80 overflow-hidden"><img src="icons/timber-canopy.webp"
+                class="w-full h-full object-cover rounded-lg">
+              <div class="absolute inset-0  bg-linear-to-t from-black via-black/50 to-transparent rounded-lg"></div>
+              <div class="absolute inset-0">
+                <div class="flex items-center gap-2 bg-orange-800 w-50 h-6 mt-10 ml-4 rounded-sm">
+                  <span class="w-2 h-2 bg-white rounded-full ml-2"></span>
+                  <span class="text-white">Timber Parametric</span>
+                </div>
+                <div class="text-yellow-200 font-bold mt-25 ml-2 mb-2 text-3xl">Timber Canopy-<br><span
+                    class="text-xl">The
+                    World's Largest Wooden Structure-Walking Above a Medieval Plaza</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="text-black text-sm font-bold leading-6 mt-10">
+            "Designed by Jürgen Mayer, this modern timber structure bridges past and future by sheltering ancient Roman
+            ruins below while offering visitors panoramic skywalk vistas across the historic city roofline..
+          </div>
+          <div class="flex flex-row items-center gap-2 p-4 ps-0">
+            <img class="-mt-3 h-10 rounded-full sm:mx-0 sm:shrink-0" src="icons/Rowan-jasp.webp" alt="" />
+            <div class="text-gray-700 text-sm"> by Jeff Bennett</div>
+            <span class="w-1 h-1 bg-gray-700 rounded-full"></span>
+            <span class="text-gray-600 text-sm ">Mar 30 2022</span>
+          </div>
+        </div>
+        <div class="flex flex-col w-full min-w-0">
+          <div class="flex">
+            <div class="relative w-full h-80 overflow-hidden"><img src="icons/volcanic-wine.webp"
+                class="w-full h-full object-cover rounded-lg">
+
+              <div class="absolute inset-0">
+                <div class="flex items-center gap-2 bg-violet-700 w-50 h-6 mt-10 ml-4 rounded-sm">
+                  <span class="w-2 h-2 bg-white rounded-full ml-2"></span>
+                  <span class="text-white">Volcanic Wines</span>
+                </div>
+                <div class="text-blue-300 font-bold mt-20 ml-2 mb-2 text-3xl">Volcanic Wine Caves-<br><span
+                    class="text-xl">Sipping Fire, The Secret Vineyards Growing in Volcanic Ash</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="text-black text-sm font-bold leading-6 mt-10">
+            "On the stark island of Lanzarote, winemakers don't plant vines in traditional soil. Instead, they dig deep
+            conical pits (hoyos) into jet-black volcanic ash to reach moisture-rich ground underneath..
+          </div>
+          <div class="flex flex-row items-center gap-2 p-4 ps-0">
+            <img class="-mt-3 h-10 w-10 rounded-full sm:mx-0 sm:shrink-0" src="icons/jeff-wilder.webp" alt="" />
+            <div class="text-gray-700 text-sm"> by Jerom John</div>
+            <span class="w-1 h-1 bg-gray-700 rounded-full"></span>
+            <span class="text-gray-600 text-sm ">Nov 3 2023</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    <div class="bg-gray-950 w-full h-auto">
+      <div class="container mx-auto w-full max-w-7xl px-4 lg:px-6">
+      <div class="flex flex-col md:flex-row items-start justify-between w-full py-10 px-5">
+        <div class="flex gap-2">
+          <div class="w-12 h-12 -rotate-30"><img src="icons/hat.png"></div>
+          <div class="font-bold text-2xl text-white">TravelTales</div>
+        </div>
+        <div class="hidden md:block text-gray-400 text-sm">Stories, guides, and inspiration from around the world.<br>
+          Discover new destinations, cultures, flavors, and experiences <br>to inspire your next journey</div>
+        <div class="flex flex-col">
+          <div class="flex items-center border rounded-lg px-2 py-1 w-70 bg-yellow-800 text-bl">
+            <input type="email" placeholder="Enter your email"
+              class="w-full outline-none text-white placeholder:text-white">
+            <button class="bg-yellow-950 text-white px-4 py-1 rounded-lg cursor-pointer">
+              Subscribe
+            </button>
+          </div>
+          <div class="text-gray-200 text-left text-xs">By subscribing you agree to our<span
+              class="underline hover:text-yellow-500">
+              privacy policy</span> </div>
+        </div>
+      </div>
+      <div class="border-b border-b-gray-800"></div>
+      <div class=" px-5 md:px-20">
+        <div class="grid md:grid-cols-5 gap-10 w-full mt-5">
+          <div class="flex flex-col gap-2">
+            <div class="text-white text-sm font-bold mb-5">Recent Post</div>
+            <div class="flex items-center gap-2 bg-red-500 w-20 h-6 rounded-sm cursor-pointer hover:bg-red-600">
+              <span class="w-2 h-2 bg-white rounded-full ml-1"></span>
+              <span class="text-white text-xs">Business</span>
+            </div>
+            <div class="text-white text-xs font-bold">Up-coming business bloggers,<br></bbr>you need to watch</div>
+            <div class="flex flex-row items-center gap-2">
+              <div class="text-white text-xs"> by William</div>
+              <span class="w-1 h-1 bg-white rounded-full"></span>
+              <span class="text-white text-xs ">Oct 30 2023</span>
+            </div>
+            <div class="flex items-center gap-2 bg-blue-500 w-20 h-6 rounded-sm mt-5 hover:bg-blue-700">
+              <span class="w-2 h-2 bg-white rounded-full ml-1"></span>
+              <span class="text-white text-xs">Marketing</span>
+            </div>
+            <div class="text-white text-xs font-bold">How did we get here? <br>The history of the business told through
+              tweets</div>
+            <div class="flex flex-row items-center gap-2">
+              <div class="text-white text-xs"> by Larry</div>
+              <span class="w-1 h-1 bg-white rounded-full"></span>
+              <span class="text-white text-xs ">Nov 3 2023</span>
+            </div>
+          </div>
+          <div class="flex flex-col gap-2 ">
+            <div class="text-white text-sm font-bold mb-5">Navigation</div>
+            <div class="common-clr"> Features</div>
+            <div class="common-clr"> Style Guide</div>
+            <div class="common-clr"> Contact Us</div>
+            <div class="common-clr"> Get Theme</div>
+            <div class="common-clr"> Support</div>
+            <div class="common-clr"> Privacy Policy</div>
+            <div class="common-clr"> Newsletter</div>
+          </div>
+          <div class="flex flex-col gap-2 mt-11">
+            <div class="common-clr"> News</div>
+            <div class="common-clr"> Career</div>
+            <div class="common-clr"> Technology</div>
+            <div class="common-clr"> Startups</div>
+            <div class="common-clr"> Gadgets</div>
+            <div class="common-clr"> Inspiration</div>
+          </div>
+          <div class="flex flex-col gap-2">
+            <div class="text-white text-sm font-bold mb-5">Get Regular Updates</div>
+            <div class="flex flex-row gap-2">
+              <div class="w-4 h-5"><img src="icons/wapp-icon.png"></div>
+              <div class="common-clr"> Whatsapp</div>
+            </div>
+            <div class="flex flex-row gap-2">
+              <div class="w-4 h-5"><img src="icons/insta-icon.png"></div>
+              <div class="common-clr"> Instagram</div>
+            </div>
+            <div class="flex flex-row gap-2">
+              <div class="w-4 h-5"><img src="icons/yt-icon.png"></div>
+              <div class="common-clr"> Youtube</div>
+            </div>
+            <div class="flex flex-row gap-2">
+              <div class="w-4 h-5"><img src="icons/twt-icon.png"></div>
+              <div class="common-clr">Twitter</div>
+            </div>
+            <div class="flex flex-row gap-2">
+              <div class="w-4 h-5"><img src="icons/Headphone.png"></div>
+              <div class="common-clr"> Podcasts</div>
+            </div>
+          </div>
+          <div class="flex flex-col gap-4">
+            <div class="text-white text-xs font-bold"> Our Mobile App </div>
+            <div class="text-white text-xs mt-5">Download our App and get the latest Breaking News Alerts and latest
+              headlinesand daily articles near you </div>
+            <div class="flex flex-row gap-2">
+              <div class="w-20 h-15"><img src="icons/appstore.png"></div>
+              <div class="w-20 h-15"><img src="icons/googleplay.png"></div>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col gap-3 mt-3">
+          <div class="text-sm text-white font-bold">What's Trending</div>
+          <div class="text-xs text-white pb-5">Travel · Food · Culture · Adventure · Photography · Nature · Wildlife ·
+            Beaches · Mountains · Heritage · Architecture · Festivals · Road Trips · Backpacking · Hidden Gems · Local
+            Life · Sustainable Travel · Travel Tips · Destinations · Exploration · History · Art · Lifestyle · Weekend
+            Getaways</div>
+        </div>
+      </div>
+    </div>
+    </div>
+  
+  <script type="module" src="/src/main.js"></script>
+</body>
