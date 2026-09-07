@@ -1,0 +1,1221 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>tailwind-css</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
+</head>
+
+<body class="min-h-screen">
+  <div class="relative w-full">
+    <img src="assets/bg-top.webp" class="w-full h-14 sm:h-10 object-cover" alt="bg-top">
+    <div
+      class="absolute inset-0 flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-6 px-3 text-white text-xs sm:text-sm">
+      <span class="text-center">
+        Unlimited Download! Just Starting from $15/m
+      </span>
+      <button
+        class="bg-amber-400 hover:bg-amber-300 text-black font-medium px-3 py-1 rounded-lg whitespace-nowrap transition">
+        Grab now!
+      </button>
+      <button id="closeTopBanner" class="absolute right-2 top-1/2 -translate-y-1/2
+            w-6 h-6 rounded-full
+            text-white
+           flex items-center justify-center
+           hover:bg-black/80">
+        <i class="fa-solid fa-xmark text-xs"></i>
+      </button>
+    </div>
+  </div>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav class="w-full bg-white border-b border-gray-100"></nav>
+    <div class="min-h-16 grid grid-cols-[minmax(0,1fr)_auto] md:grid-cols-[1fr_auto_1fr] items-center gap-2">
+      <div class="flex items-center min-w-0">
+        <img src="assets/logo.webp" alt="TravelTales logo" class="w-16 h-16 sm:w-20 sm:h-20 object-contain shrink-0">
+        <span id="blogName" class="font-bold text-lg sm:text-2xl text-blue-950 whitespace-nowrap">
+          TravelTales
+        </span>
+      </div>
+      <div class="hidden md:flex items-baseline justify-center gap-5 lg:gap-7">
+        <a href="#"
+          class="inline-flex items-baseline gap-1 text-sm font-medium text-gray-600 hover:text-blue-950 hover:font-bold whitespace-nowrap">
+          Home
+          <svg class="w-2.5 h-2.5 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd"
+              d="M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.168l3.71-3.938a.75.75 0 1 1 1.08 1.04l-4.25 4.51a.75.75 0 0 1-1.08 0l-4.25-4.51a.75.75 0 0 1 .02-1.06Z"
+              clip-rule="evenodd" />
+          </svg>
+        </a>
+        <a href="#"
+          class="inline-flex items-baseline gap-1 text-sm font-medium text-gray-600 hover:text-blue-950 hover:font-bold whitespace-nowrap">
+          Pages
+          <svg class="w-2.5 h-2.5 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd"
+              d="M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.168l3.71-3.938a.75.75 0 1 1 1.08 1.04l-4.25 4.51a.75.75 0 0 1-1.08 0l-4.25-4.51a.75.75 0 0 1 .02-1.06Z"
+              clip-rule="evenodd" />
+          </svg>
+        </a>
+        <a href="#"
+          class="inline-flex items-baseline gap-1 text-sm font-medium text-gray-600 hover:text-blue-950 hover:font-bold whitespace-nowrap">
+          Post
+          <svg class="w-2.5 h-2.5 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd"
+              d="M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.168l3.71-3.938a.75.75 0 1 1 1.08 1.04l-4.25 4.51a.75.75 0 0 1-1.08 0l-4.25-4.51a.75.75 0 0 1 .02-1.06Z"
+              clip-rule="evenodd" />
+          </svg>
+        </a>
+        <a href="#"
+          class="inline-flex items-baseline gap-1 text-sm font-medium text-gray-600 hover:text-blue-950 hover:font-bold whitespace-nowrap">
+          Lifestyle
+          <svg class="w-2.5 h-2.5 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd"
+              d="M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.168l3.71-3.938a.75.75 0 1 1 1.08 1.04l-4.25 4.51a.75.75 0 0 1-1.08 0l-4.25-4.51a.75.75 0 0 1 .02-1.06Z"
+              clip-rule="evenodd" />
+          </svg>
+        </a>
+        <a href="#"
+          class="inline-flex items-baseline gap-1 text-sm font-medium text-gray-600 hover:text-blue-950 hover:font-bold whitespace-nowrap">
+          Dashboard
+          <svg class="w-2.5 h-2.5 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd"
+              d="M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.168l3.71-3.938a.75.75 0 1 1 1.08 1.04l-4.25 4.51a.75.75 0 0 1-1.08 1.04l-4.25-4.51a.75.75 0 0 1 .02-1.06Z"
+              clip-rule="evenodd" />
+          </svg>
+        </a>
+      </div>
+      <div class="flex items-center justify-end gap-1 sm:gap-2 shrink-0">
+        <button class="hidden sm:block bg-red-600 hover:bg-red-700
+                 text-white text-sm font-medium
+                 px-3 sm:px-4 py-2 rounded-lg transition">
+          Subscribe
+        </button>
+        <div class="relative flex items-center">
+          <input id="searchBar" type="text" placeholder="Search..." class="hidden w-36 sm:w-40 lg:w-48 h-9
+                   px-4 pr-9
+                   rounded-full
+                   border border-gray-300
+                   text-sm
+                   outline-none
+                   focus:border-sky-500
+                   focus:ring-2 focus:ring-sky-100">
+          <button id="searchBtn" class="p-2 rounded-lg hover:bg-gray-100 transition" aria-label="Search">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8"
+              stroke="currentColor" class="w-5 h-5">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 1 5.197 5.197a7.5 7.5 0 0 1 10.606 10.606Z" />
+            </svg>
+          </button>
+          <button id="closeSearch" class="hidden absolute right-2 p-1
+                   text-gray-500 hover:text-gray-900" aria-label="Close search">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8"
+              stroke="currentColor" class="w-4 h-4">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+        <button id="menuBtn" class="p-2 rounded-lg hover:bg-gray-100 transition" aria-label="Open menu">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5M12 17.25h8.25" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+  </nav>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav class="w-full bg-sky-100 h-10 rounded-sm">
+      <div class="h-full flex items-center gap-2 sm:gap-4">
+        <button class="bg-blue-800 text-white text-xs sm:text-sm
+               w-20 sm:w-24 h-7 rounded-sm shrink-0 ml-2">
+          Trending :
+        </button>
+        <div class="flex-1 min-w-0 overflow-hidden">
+          <marquee id="trendingText" direction="left" scrollamount="5" class="text-xs sm:text-sm text-gray-600"
+            style="margin-right: 15%;">
+            Tokyo: Why everyone is booking trips to Tokyo this season—
+            unbeatable street food, cherry blossoms, and tech culture
+          </marquee>
+        </div>
+        <div class="flex items-center gap-1 shrink-0">
+          <button id="prevTrending" class="w-7 h-7 flex items-center justify-center
+                 hover:bg-sky-300 rounded-full">
+            <img src="assets/chevron-left.svg" alt="Previous" class="w-7 h-7">
+          </button>
+          <button id="nextTrending" class="w-7 h-7 flex items-center justify-center
+                 hover:bg-sky-300 rounded-full">
+            <img src="assets/chevron-right.svg" alt="Next" class="w-7 h-7">
+          </button>
+        </div>
+      </div>
+    </nav>
+  </div>
+  <div class="container mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-4 pt-6 md:h-112.5">
+      <div
+        class="md:col-span-2 md:row-span-2 min-h-0 relative rounded-lg overflow-hidden cursor-pointer  transition-transform duration-500 ease-out hover:scale-[1.02]">
+        <img src="assets/image-1.avif" alt="" class="w-full h-full object-cover" />
+        <div class="absolute inset-0 bg-linear-to-t from-black/80 to-transparent"></div>
+        <div class="absolute bottom-0 left-0 p-4 text-white">
+          <div class="flex items-center gap-2 bg-red-500 w-fit h-6 px-2 rounded-sm">
+            <span class="w-2 h-2 bg-white rounded-full"></span>
+            <span class="text-xs">Hidden Places</span>
+          </div>
+          <h2 class="md:text-lg font-bold mt-2 lg:text-2xl">
+            <span class="bg-[linear-gradient(white,white)]
+           bg-no-repeat
+           bg-size-[0%_2px]
+           bg-position-[0_100%]
+           hover:bg-size-[100%_2px]
+           transition-[background-size]
+           duration-500
+           ease-out
+           cursor-pointer
+           [box-decoration-break:clone]
+           [-webkit-box-decoration-break:clone]">
+              Discover Secret Places-Explore beautiful places around the world.</span>
+          </h2>
+          <div class="hidden md:flex flex-wrap items-center gap-2 pt-3">
+            <img class="h-8 w-8 rounded-full shrink-0" src="assets/laura.webp" alt="" />
+            <span class="text-xs">By Laura Elizabeth</span>
+            <span class="w-1 h-1 bg-white rounded-full"></span>
+            <span class="text-xs">April 7 2026</span>
+            <span class="w-1 h-1 bg-white rounded-full"></span>
+            <span class="text-xs">5 min read</span>
+          </div>
+        </div>
+      </div>
+      <div
+        class="md:col-span-2 min-h-0 relative rounded-lg overflow-hidden cursor-pointer transition-transform duration-500 ease-out hover:scale-[1.02]">
+        <img src="assets/scooba-diving.webp" alt="" class="w-full h-full object-cover" />
+        <div class="absolute inset-0 bg-linear-to-t from-black/80 to-transparent"></div>
+        <div class="absolute bottom-0 left-0 p-3 text-white">
+          <div class="flex items-center gap-2 bg-blue-600 w-fit h-6 px-2 rounded-sm">
+            <span class="w-2 h-2 bg-white rounded-full"></span>
+            <span class="text-xs">Adventure</span>
+          </div>
+          <h2 class="text-lg font-bold mt-1 md">
+            <span class="bg-[linear-gradient(white,white)]
+           bg-no-repeat
+           bg-size-[0%_2px]
+           bg-position-[0_100%]
+           hover:bg-size-[100%_2px]
+           transition-[background-size]
+           duration-500
+           ease-out
+           cursor-pointer
+           [box-decoration-break:clone]
+           [-webkit-box-decoration-break:clone]">
+              Dive Into Adventure-Experience amazing underwater journeys.</span>
+          </h2>
+          <div class="hidden md:flex flex-wrap items-center gap-2 pt-2">
+            <span class="text-xs"> By Raes Lis</span>
+            <span class="w-1 h-1 bg-white rounded-full"></span>
+            <span class="text-xs">Mar 25 2026</span>
+            <span class="w-1 h-1 bg-white rounded-full"></span>
+            <span class="text-xs">2 min read</span>
+          </div>
+        </div>
+      </div>
+      <div
+        class="min-h-0 relative rounded-lg overflow-hidden cursor-pointer transition-transform duration-500 ease-out hover:scale-[1.02]">
+        <img src="assets/Traveler.jpg" alt="" class="w-full h-full object-cover" />
+        <div class="absolute inset-0 bg-linear-to-t from-black/80 to-transparent"></div>
+        <div class="absolute bottom-0 left-0 p-3 text-white">
+          <div class="flex items-center gap-1 bg-yellow-600 w-fit h-5 px-2 rounded-sm">
+            <span class="w-1.5 h-1.5 bg-white rounded-full"></span>
+            <span class="text-[10px] text-black">Solo Travel</span>
+          </div>
+          <h2 class="text-lg font-bold mt-1">
+            <span class="bg-[linear-gradient(white,white)]
+           bg-no-repeat
+           bg-size-[0%_2px]
+           bg-position-[0_100%]
+           hover:bg-size-[100%_2px]
+           transition-[background-size]
+           duration-500
+           ease-out
+           cursor-pointer
+           [box-decoration-break:clone]
+           [-webkit-box-decoration-break:clone]">
+              Journey Beyond Borders-Stories from unforgettable journeys.</span>
+          </h2>
+          <div class="hidden md:flex flex-wrap items-center gap-1 pt-2">
+            <span class="text-[10px]">By Dian James</span>
+            <span class="w-1 h-1 bg-white rounded-full"></span>
+            <span class="text-[10px]">April 7 2026</span>
+            <span class="w-1 h-1 bg-white rounded-full"></span>
+            <span class="text-[10px]">4 min read</span>
+          </div>
+        </div>
+      </div>
+      <div
+        class="min-h-0 relative rounded-lg overflow-hidden cursor-pointer transition-transform duration-500 ease-out hover:scale-[1.02]">
+        <img src="assets/bussines.jpg" alt="" class="w-full h-full object-cover" />
+        <div class="absolute inset-0 bg-linear-to-t from-black/80 to-transparent"></div>
+        <div class="absolute bottom-0 left-0 p-3 text-white">
+          <div class="flex items-center gap-1 bg-green-950 w-fit h-5 px-2 rounded-sm">
+            <span class="w-1.5 h-1.5 bg-white rounded-full"></span>
+            <span class="text-[10px]">Business</span>
+          </div>
+          <h2 class="text-lg font-bold mt-1">
+            <span class="bg-[linear-gradient(white,white)]
+           bg-no-repeat
+           bg-size-[0%_2px]
+           bg-position-[0_100%]
+           hover:bg-size-[100%_2px]
+           transition-[background-size]
+           duration-500
+           ease-out
+           cursor-pointer
+           [box-decoration-break:clone]
+           [-webkit-box-decoration-break:clone]">
+              Business Around World- Discover inspiring business stories.
+            </span>
+          </h2>
+          <div class="hidden md:flex flex-wrap items-center gap-1 pt-2">
+            <span class="text-[10px]">By Jeff Wilder</span>
+            <span class="w-1 h-1 bg-white rounded-full"></span>
+            <span class="text-[10px]">Dec 18 2026</span>
+            <span class="w-1 h-1 bg-white rounded-full"></span>
+            <span class="text-[10px]">6 min read</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_220px] gap-6 mt-8">
+      <section>
+        <div class="mb-4">
+          <div class="flex items-center gap-2">
+            <i class="fa-solid fa-hourglass-half text-gray-800 text-xl"></i>
+            <h2 class="text-xl font-bold">
+              Today's top highlights
+            </h2>
+          </div>
+          <p class="text-xs text-gray-500 ml-9">
+            Latest breaking news, pictures, videos, and special reports
+          </p>
+        </div>
+        <div id="postsGrid" class="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <article>
+            <div
+              class="relative h-70 overflow-hidden rounded-lg cursor-pointer transition-transform duration-500 ease-out hover:scale-[1.02]">
+              <img src="assets/fore-island.webp" class="w-full h-full object-cover" alt="Fore-Island">
+              <div class="absolute inset-0 bg-linear-to-t from-black/80 to-transparent"></div>
+              <div class="absolute bottom-3 left-3 flex items-center gap-2
+                        bg-amber-950 px-2 h-6 rounded-sm text-white">
+                <span class="w-2 h-2 bg-white rounded-full"></span>
+                <span class="text-xs">Explore</span>
+              </div>
+            </div>
+            <h3 class="text-lg font-bold mt-2">
+              <span class="bg-[linear-gradient(currentColor,currentColor)]
+           bg-no-repeat
+           bg-size-[0%_2px]
+           bg-position-[0_100%]
+           hover:bg-size-[100%_2px]
+           transition-[background-size]
+           duration-500
+           ease-out
+           cursor-pointer">
+                The Faroe Islands in the North Atlantic, Socotra in the Indian Ocean
+              </span>
+            </h3>
+            <p class="text-xs text-gray-500 mt-1">
+              Forget crowded capitals and tourist traps. These two isolated island frontiers are so otherworldly, you’ll
+              double-check your coordinates.
+            </p>
+            <div class="flex flex-wrap items-center gap-2 pt-3">
+              <img class="h-8 w-8 rounded-full shrink-0" src="assets/george.webp" alt="" />
+              <span class="text-xs text-gray-600">
+                by George David
+              </span>
+              <span class="w-1 h-1 bg-gray-500 rounded-full"></span>
+              <span class="text-xs text-gray-500">
+                Jan 11 2026
+              </span>
+            </div>
+          </article>
+          <article>
+            <div
+              class="relative h-70 overflow-hidden rounded-lg cursor-pointer transition-transform duration-500 ease-out hover:scale-[1.02]">
+              <img src="assets/rufous-sengi.jpg" class="w-full h-full object-cover" alt="Volcanic Vines">
+              <div class="absolute inset-0 bg-linear-to-t from-black/80 to-transparent"></div>
+              <div class="absolute bottom-3 left-3 flex items-center gap-2
+                        bg-amber-500 px-2 h-6 rounded-sm text-black">
+                <span class="w-2 h-2 bg-white rounded-full"></span>
+                <span class="text-xs">Species</span>
+              </div>
+            </div>
+            <h3 class="text-lg font-bold mt-2">
+              <span class="bg-[linear-gradient(currentColor,currentColor)]
+           bg-no-repeat
+           bg-size-[0%_2px]
+           bg-position-[0_100%]
+           hover:bg-size-[100%_2px]
+           transition-[background-size]
+           duration-500
+           ease-out
+           cursor-pointer">
+                Spotting East Africa’s Miniature Marvel: The Black and Rufous Sengi</span>
+            </h3>
+            <p class="text-xs text-gray-500 mt-1">
+              "While everyone looks up to find Africa’s 'Big Five,' remember to cast your eyes to the forest floor
+            </p>
+            <div class="flex flex-wrap items-center gap-2 pt-3">
+              <img class="h-8 w-8 rounded-full shrink-0" src="assets/jeff-wilder.webp" alt="" />
+              <span class="text-xs text-gray-600">
+                by Jeff Wilder
+              </span>
+              <span class="w-1 h-1 bg-gray-500 rounded-full"></span>
+              <span class="text-xs text-gray-500">
+                Sep 12 2024
+              </span>
+            </div>
+          </article>
+          <article>
+            <div
+              class="relative h-70 overflow-hidden rounded-lg cursor-pointer transition-transform duration-500 ease-out hover:scale-[1.02]">
+              <img src="assets/eagle-hunting.webp" class="w-full h-full object-cover" alt="Eagle Hunters">
+              <div class="absolute inset-0 bg-linear-to-t from-black/80 to-transparent"></div>
+              <div class="absolute bottom-3 left-3 flex items-center gap-2
+                        bg-red-700 px-2 h-6 rounded-sm text-white">
+                <span class="w-2 h-2 bg-white rounded-full"></span>
+                <span class="text-xs">Valley Hunters</span>
+              </div>
+            </div>
+            <h3 class="text-lg font-bold mt-2">
+              <span class="bg-[linear-gradient(currentColor,currentColor)]
+           bg-no-repeat
+           bg-size-[0%_2px]
+           bg-position-[0_100%]
+           hover:bg-size-[100%_2px]
+           transition-[background-size]
+           duration-500
+           ease-out
+           cursor-pointer">
+                Cultural partnership between human and bird</span>
+            </h3>
+            <p class="text-xs text-gray-500 mt-1">
+              ‘We do not own the eagle,’ the old Berkutchi told me as we rode into the sub-zero wind. ‘She is a guest in
+              our family.
+            </p>
+            <div class="flex flex-wrap items-center gap-2 pt-3">
+              <img class="h-8 w-8 rounded-full shrink-0" src="assets/llimvard.webp" alt="" />
+              <span class="text-xs text-gray-600">
+                By Limvard Jin
+              </span>
+              <span class="w-1 h-1 bg-gray-500 rounded-full"></span>
+              <span class="text-xs text-gray-500">
+                june 7 2025
+              </span>
+            </div>
+          </article>
+          <article>
+            <div
+              class="relative h-70 overflow-hidden rounded-lg cursor-pointer transition-transform duration-500 ease-out hover:scale-[1.02]">
+              <img src="assets/singers.webp" class="w-full h-full object-cover" alt="Tuva Singers">
+              <div class="absolute inset-0 bg-linear-to-t from-black/80 to-transparent"></div>
+              <div class="absolute bottom-3 left-3 flex items-center gap-2
+                        bg-blue-500 px-2 h-6 rounded-sm text-white">
+                <span class="w-2 h-2 bg-white rounded-full"></span>
+                <span class="text-xs text-black">Acoustic Hideaways</span>
+              </div>
+            </div>
+            <h3 class="text-lg font-bold mt-2">
+              <span class="bg-[linear-gradient(currentColor,currentColor)]
+           bg-no-repeat
+           bg-size-[0%_2px]
+           bg-position-[0_100%]
+           hover:bg-size-[100%_2px]
+           transition-[background-size]
+           duration-500
+           ease-out
+           cursor-pointer">
+                Unearthing the Hidden Overtone Singers of Remote Tuva</span>
+            </h3>
+            <p class="text-xs text-gray-500 mt-1">
+              In Tuva, singing is not done to impress an audience; it is done to communicate with the spirit of the
+              land,
+              the rivers, and the mountains."
+            </p>
+            <div class="flex flex-wrap items-center gap-2 pt-3">
+              <img class="h-8 w-8 rounded-full shrink-0" src="assets/Kaelen Finch.webp" alt="" />
+              <span class="text-xs text-gray-600">
+                by Kaelen Finch
+              </span>
+              <span class="w-1 h-1 bg-gray-500 rounded-full"></span>
+              <span class="text-xs text-gray-500">
+                Feb 3 2026
+              </span>
+            </div>
+          </article>
+          <article>
+            <div
+              class="relative h-70 overflow-hidden rounded-lg cursor-pointer transition-transform duration-500 ease-out hover:scale-[1.02]">
+              <img src="assets/sunken.webp" class="w-full h-full object-cover" alt="UnderWater Arcehology">
+              <div class="absolute inset-0 bg-linear-to-t from-black/80 to-transparent"></div>
+              <div class="absolute bottom-3 left-3 flex items-center gap-2
+                        bg-violet-800 px-2 h-6 rounded-sm text-white">
+                <span class="w-2 h-2 bg-white rounded-full"></span>
+                <span class="text-xs">Lost Archaeology</span>
+              </div>
+            </div>
+            <h3 class="text-lg font-bold mt-2">
+              <span class="bg-[linear-gradient(currentColor,currentColor)]
+           bg-no-repeat
+           bg-size-[0%_2px]
+           bg-position-[0_100%]
+           hover:bg-size-[100%_2px]
+           transition-[background-size]
+           duration-500
+           ease-out
+           cursor-pointer">
+                The Atlantis of Egypt: Stepping Into the City Buried Beneath the Sea</span>
+            </h3>
+            <p class="text-xs text-gray-500 mt-1">
+              Before Alexandria was born, Thonis-Heracleion stood as Egypt's bustling gateway to the Mediterranean.
+              Then,
+              around the 8th century AD
+            </p>
+            <div class="flex flex-wrap items-center gap-2 pt-3">
+              <img class="h-8 w-8 rounded-full shrink-0" src="assets/sylvia.webp" alt="" />
+              <span class="text-xs text-gray-600">
+                by Sylvia
+              </span>
+              <span class="w-1 h-1 bg-gray-500 rounded-full"></span>
+              <span class="text-xs text-gray-500">
+                Jul 12 2025
+              </span>
+            </div>
+          </article>
+          <article>
+            <div
+              class="relative h-70 overflow-hidden rounded-lg cursor-pointer transition-transform duration-500 ease-out hover:scale-[1.02]">
+              <img src="assets/timber-canopy.webp" class="w-full h-full object-cover" alt="Timber Canopy">
+              <div class="absolute inset-0 bg-linear-to-t from-black/80 to-transparent"></div>
+              <div class="absolute bottom-3 left-3 flex items-center gap-2
+                        bg-pink-700 px-2 h-6 rounded-sm text-white">
+                <span class="w-2 h-2 bg-white rounded-full"></span>
+                <span class="text-xs">Timber Parametric</span>
+              </div>
+            </div>
+            <h3 class="text-lg font-bold mt-2">
+              <span class="bg-[linear-gradient(currentColor,currentColor)]
+           bg-no-repeat
+           bg-size-[0%_2px]
+           bg-position-[0_100%]
+           hover:bg-size-[100%_2px]
+           transition-[background-size]
+           duration-500
+           ease-out
+           cursor-pointer">
+                World's Largest Wooden Structure-Walking Above a Medieval Plaza</span>
+            </h3>
+            <p class="text-xs text-gray-500 mt-1">
+              Designed by Jürgen Mayer, this modern timber structure bridges past and future by sheltering ancient Roman
+              ruins below while offering visitors panoramic skywalk vistas across the historic city roofline.
+            </p>
+            <div class="flex flex-wrap items-center gap-2 pt-3">
+              <img class="h-8 w-8 rounded-full shrink-0" src="assets/Rowan-jasp.webp" alt="" />
+              <span class="text-xs text-gray-600">
+                by Rowan Jasp
+              </span>
+              <span class="w-1 h-1 bg-gray-500 rounded-full"></span>
+              <span class="text-xs text-gray-500">
+                Aug 1 2025
+              </span>
+            </div>
+          </article>
+          <article class="more-post hidden">
+            <div
+              class="relative h-70 overflow-hidden rounded-lg cursor-pointer transition-transform duration-500 ease-out hover:scale-[1.02]">
+              <img src="assets/volcanic-wine.webp" class="w-full h-full object-cover" alt="Volcanic Vines">
+              <div class="absolute inset-0 bg-linear-to-t from-black/80 to-transparent"></div>
+              <div class="absolute bottom-3 left-3 flex items-center gap-2
+                        bg-orange-500 px-2 h-6 rounded-sm text-white">
+                <span class="w-2 h-2 bg-white rounded-full"></span>
+                <span class="text-xs">Volcanic Wines</span>
+              </div>
+            </div>
+            <h3 class="text-lg font-bold mt-2">
+              <span class="bg-[linear-gradient(currentColor,currentColor)]
+                  bg-no-repeat
+                  bg-size-[0%_2px]
+                  bg-position-[0_100%]
+                  hover:bg-size-[100%_2px]
+                  transition-[background-size]
+                  duration-500
+                  ease-out
+                  cursor-pointer">
+              Sipping Fire, The Secret Vineyards Growing in Volcanic Ash</span></h3>
+            <p class="text-xs text-gray-500 mt-1">
+              "On the stark island of Lanzarote, winemakers don't plant vines in traditional soil. Instead, they dig
+              deep
+              conical pits (hoyos) into jet-black volcanic ash to reach moisture-rich ground underneath.
+            </p>
+            <div class="flex flex-wrap items-center gap-2 pt-3">
+              <img class="h-8 w-8 rounded-full shrink-0" src="assets/jeff-wilder.webp" alt="" />
+              <span class="text-xs text-gray-600">
+                by Jeff Wilder
+              </span>
+              <span class="w-1 h-1 bg-gray-500 rounded-full"></span>
+              <span class="text-xs text-gray-500">
+                Sep 12 2024
+              </span>
+            </div>
+          </article>
+          <article class="more-post hidden">
+            <div
+              class="relative h-70 overflow-hidden rounded-lg cursor-pointer transition-transform duration-500 ease-out hover:scale-[1.02]">
+              <img src="assets/dance-festival-japan.jpg" class="w-full h-full object-cover" alt="dance-festival-japan">
+              <div class="absolute inset-0 bg-linear-to-t from-black/80 to-transparent"></div>
+              <div class="absolute bottom-3 left-3 flex items-center gap-2
+                        bg-pink-300 px-2 h-6 rounded-sm text-white">
+                <span class="w-2 h-2 bg-white rounded-full"></span>
+                <span class="text-xs text-black">Traditions</span>
+              </div>
+            </div>
+            <h3 class="text-lg font-bold mt-2">
+              <span class="bg-[linear-gradient(currentColor,currentColor)]
+           bg-no-repeat
+           bg-size-[0%_2px]
+           bg-position-[0_100%]
+           hover:bg-size-[100%_2px]
+           transition-[background-size]
+           duration-500
+           ease-out
+           cursor-pointer">
+                Rhythms of Summer: The Hypnotic Grace of Japan's Traditional Dance</span>
+            </h3>
+            <p class="text-xs text-gray-500 mt-1">
+              During the festival, rows of dancers glide down the avenues in stunning unison, wearing beautifully
+              patterned pink robes and distinctive, half-moon-shaped amigasa straw hats
+            </p>
+            <div class="flex flex-wrap items-center gap-2 pt-3">
+              <img class="h-8 w-8 rounded-full shrink-0" src="assets/sara-m.webp" alt="" />
+              <span class="text-xs text-gray-600">
+                by Sara Bennet
+              </span>
+              <span class="w-1 h-1 bg-gray-500 rounded-full"></span>
+              <span class="text-xs text-gray-500">
+                May 1 2022
+              </span>
+            </div>
+          </article>
+        </div>
+        <div class="flex justify-center mt-8">
+          <button id="loadMoreBtn"
+            class="flex items-center gap-2 px-5 py-2 border border-blue-600 text-blue-600 rounded-lg">
+            <span id="loadMoreText">Load More Posts</span>
+            <i id="loadMoreIcon" class="fa-solid fa-chevron-down text-xs"></i>
+          </button>
+        </div>
+      </section>
+      <aside class="w-full lg:w-54">
+        <div class="flex gap-3 justify-center mt-5">
+          <div class="flex items-start justify-center pt-1
+                bg-pink-600 w-16 h-22 rounded-lg
+                bg-linear-to-b from-yellow-200 via-pink-400 to-transparent
+                transition-transform duration-100 hover:scale-105">
+            <button>
+              <img src="assets/Instagram.png" class="w-6 h-6 ml-3">
+              <span class="text-xs mt-2 text-white">
+                2M<br>Followers
+              </span>
+            </button>
+          </div>
+          <div class="flex items-start justify-center pt-1
+                bg-blue-600 w-16 h-22 rounded-lg
+                bg-linear-to-b from-blue-100 via-blue-300 to-transparent
+                transition-transform duration-100 hover:scale-105">
+            <button>
+              <img src="assets/Facebook.png" class="w-6 h-6">
+              <span class="text-xs mt-2 text-white">
+                50k<br>Fans
+              </span>
+            </button>
+          </div>
+          <div class="flex items-start justify-center pt-1
+                bg-red-600 w-16 h-22 rounded-lg
+                bg-linear-to-b from-red-300 via-red-400 to-transparent
+                transition-transform duration-100 hover:scale-105">
+            <button>
+              <img src="assets/Youtube.png" class="w-6 h-6">
+              <span class="text-xs mt-2 text-white">
+                100k<br>Subs
+              </span>
+            </button>
+          </div>
+        </div>
+        <div class="mt-6">
+          <h2 class="font-bold text-lg">Trending Topics</h2>
+          <div class="grid grid-cols-1 gap-3 mt-4 w-full">
+            <div id="food" class="relative w-full h-16 overflow-hidden rounded-lg group">
+              <img src="assets/food.webp"
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                alt="Food">
+              <div class="absolute inset-0 bg-linear-to-t from-black/80 to-transparent flex items-end">
+                <span class="text-white font-bold text-sm px-4 pb-3">
+                  Food
+                </span>
+              </div>
+            </div>
+            <div id="cultures" class="relative w-full h-16 overflow-hidden rounded-lg group">
+              <img src="assets/cultures.webp"
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                alt="Cultures">
+              <div class="absolute inset-0 bg-linear-to-t from-black/80 to-transparent flex items-end">
+                <span class="text-white font-bold text-sm px-4 pb-3">
+                  Cultures
+                </span>
+              </div>
+            </div>
+            <div id="creatures" class="relative w-full h-16 overflow-hidden rounded-lg group">
+              <img src="assets/creatures.webp"
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                alt="Creatures">
+              <div class="absolute inset-0 bg-linear-to-t from-black/80 to-transparent flex items-end">
+                <span class="text-white font-bold text-sm px-4 pb-3">
+                  Creatures
+                </span>
+              </div>
+            </div>
+            <div id="flora" class="relative w-full h-16 overflow-hidden rounded-lg group">
+              <img src="assets/flora.webp"
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                alt="Flora & Fauna">
+              <div class="absolute inset-0 bg-linear-to-t from-black/80 to-transparent flex items-end">
+                <span class="text-white font-bold text-sm px-4 pb-3">
+                  Flora & Fauna
+                </span>
+              </div>
+            </div>
+            <div id="photography" class="relative w-full h-16 overflow-hidden rounded-lg group">
+              <img src="assets/phgy.webp"
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                alt="Photography">
+              <div class="absolute inset-0 bg-linear-to-t from-black/80 to-transparent flex items-end">
+                <span class="text-white font-bold text-sm px-4 pb-3">
+                  Photography
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex justify-center mt-3">
+          <a href="#" class="text-sm text-gray-700 underline underline-offset-1 hover:text-black">
+            View all categories
+          </a>
+        </div>
+        <div class="mt-8">
+          <h3 class="text-lg font-bold mb-4">
+            Recent Posts
+          </h3>
+          <div class="flex flex-col gap-4">
+            <div class="flex items-center gap-3">
+              <img src="assets/stay.jpg" alt="" class="w-16 h-16 object-cover rounded-lg shrink-0" />
+              <div class="min-w-0">
+                <h4 class="text-sm font-bold leading-tight">
+                  <span class="bg-[linear-gradient(currentColor,currentColor)]
+                  bg-no-repeat
+                  bg-size-[0%_2px]
+                  bg-position-[0_100%]
+                  hover:bg-size-[100%_2px]
+                  transition-[background-size]
+                  duration-500
+                  ease-out
+                  cursor-pointer">
+                    How to Spot Fake Reviews Before Booking a Hotel</span>
+                </h4>
+                <p class="text-xs text-gray-500 mt-2">
+                  July 28 2026
+                </p>
+              </div>
+            </div>
+            <div class="flex items-center gap-3">
+              <img src="assets/city.jpg" alt="" class="w-16 h-16 object-cover rounded-lg shrink-0" />
+              <div class="min-w-0">
+                <h4 class="text-sm font-bold leading-tight">
+                  <span class="bg-[linear-gradient(currentColor,currentColor)]
+                  bg-no-repeat
+                  bg-size-[0%_2px]
+                  bg-position-[0_100%]
+                  hover:bg-size-[100%_2px]
+                  transition-[background-size]
+                  duration-500
+                  ease-out
+                  cursor-pointer">
+                    Five Unbelievable Facts About Hidden European Cities</span>
+                </h4>
+                <p class="text-xs text-gray-500 mt-2">
+                  June 2 2026
+                </p>
+              </div>
+            </div>
+            <div class="flex items-center gap-3">
+              <img src="assets/chef.jpg" alt="" class="w-16 h-16 object-cover rounded-lg shrink-0" />
+              <div class="min-w-0">
+                <h4 class="text-sm font-bold leading-tight">
+                  <span class="bg-[linear-gradient(currentColor,currentColor)]
+                  bg-no-repeat
+                  bg-size-[0%_2px]
+                  bg-position-[0_100%]
+                  hover:bg-size-[100%_2px]
+                  transition-[background-size]
+                  duration-500
+                  ease-out
+                  cursor-pointer">
+                    Five Dishes You Must Try Before Leaving Southeast Asia</span>
+                </h4>
+                <p class="text-xs text-gray-500 mt-2">
+                  July 4 2026
+                </p>
+              </div>
+            </div>
+            <div class="flex items-center gap-3">
+              <img src="assets/bussines.jpg" alt="" class="w-16 h-16 object-cover rounded-lg shrink-0" />
+              <div class="min-w-0">
+                <h4 class="text-sm font-bold leading-tight">
+                  <span class="bg-[linear-gradient(currentColor,currentColor)]
+                  bg-no-repeat
+                  bg-size-[0%_2px]
+                  bg-position-[0_100%]
+                  hover:bg-size-[100%_2px]
+                  transition-[background-size]
+                  duration-500
+                  ease-out
+                  cursor-pointer">
+                    Inspiring Stories From Around</span>
+                </h4>
+                <p class="text-xs text-gray-500 mt-2">
+                  Mar 15 2026
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mt-8">
+          <img src="assets/spotify-ad.webp" alt="Advertisement"
+            class="w-full h-auto hidden lg:block rounded-lg object-cover" />
+        </div>
+      </aside>
+    </div>
+    <div class="w-full h-px bg-gray-300 mx-auto mt-6"></div>
+  </div>
+  <div class="container mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+    <section class="mt-8">
+      <div class="flex items-center justify-between mb-5">
+        <div class="flex items-center gap-2">
+          <i class="fa-solid fa-newspaper text-blue-600"></i>
+          <h2 class="text-lg font-bold text-gray-800">
+            Sponsored News
+          </h2>
+        </div>
+        <p class="text-sm text-gray-600">
+          Content By:
+          <span class="font-semibold underline">
+            TravelTales
+          </span>
+        </p>
+      </div>
+      <div class="relative w-full overflow-hidden">
+        <div id="newsCarousel" class="flex">
+          <article class="shrink-0 w-full lg:w-1/4 px-2">
+            <div
+              class="relative h-70 overflow-hidden rounded-lg cursor-pointer transition-transform duration-500 ease-out hover:scale-[1.02]">
+              <img src="assets/wild-life.jpg" class="w-full h-full object-cover" alt="wildlife">
+              <div class="absolute inset-0 bg-linear-to-t from-black/80 to-transparent"></div>
+              <div class="absolute bottom-5 left-3 flex items-center gap-2
+                        bg-orange-500 px-2 h-6 rounded-sm text-white">
+                <span class="w-2 h-2 bg-white rounded-full"></span>
+                <span class="text-xs">Wild Life</span>
+              </div>
+            </div>
+            <h3 class="text-lg font-bold mt-2">
+              <span class="bg-[linear-gradient(currentColor,currentColor)]
+                  bg-no-repeat
+                  bg-size-[0%_2px]
+                  bg-position-[0_100%]
+                  hover:bg-size-[100%_2px]
+                  transition-[background-size]
+                  duration-500
+                  ease-out
+                  cursor-pointer">
+                Wildlife Tourism Is Growing — But Are We Traveling Responsibly?</span>
+            </h3>
+            <div class="flex flex-wrap items-center gap-2 pt-3">
+              <img class="h-8 w-8 rounded-full shrink-0 object-cover" src="assets/emily.jpg" alt="" />
+              <span class="text-xs text-gray-600">
+                By Emily
+              </span>
+              <span class="w-1 h-1 bg-gray-500 rounded-full"></span>
+              <span class="text-xs text-gray-500">
+                June 11 2024
+              </span>
+            </div>
+          </article>
+          <article class="shrink-0 w-full lg:w-1/4 px-2">
+            <div
+              class="relative h-70 overflow-hidden rounded-lg cursor-pointer transition-transform duration-500 ease-out hover:scale-[1.02]">
+              <img src="assets/festiva.jpg" class="w-full h-full object-cover" alt="fetsival">
+              <div class="absolute inset-0 bg-linear-to-t from-black/80 to-transparent"></div>
+              <div class="absolute bottom-5 left-3 flex items-center gap-2
+                        bg-sky-300 px-2 h-6 rounded-sm text-black">
+                <span class="w-2 h-2 bg-black rounded-full"></span>
+                <span class="text-xs">Festival</span>
+              </div>
+            </div>
+            <h3 class="text-lg font-bold mt-2">
+              <span class="bg-[linear-gradient(currentColor,currentColor)]
+                  bg-no-repeat
+                  bg-size-[0%_2px]
+                  bg-position-[0_100%]
+                  hover:bg-size-[100%_2px]
+                  transition-[background-size]
+                  duration-500
+                  ease-out
+                  cursor-pointer">
+                These Colorful Festivals Are Drawing Travelers From Around the World</span>
+            </h3>
+            <div class="flex flex-wrap items-center gap-2 pt-3">
+              <img class="h-8 w-8 rounded-full shrink-0 object-cover" src="assets/Xavier.avif" alt="" />
+              <span class="text-xs text-gray-600">
+                by Xavier Jude
+              </span>
+              <span class="w-1 h-1 bg-gray-500 rounded-full"></span>
+              <span class="text-xs text-gray-500">
+                May 3 2026
+              </span>
+            </div>
+          </article>
+          <article class="shrink-0 w-full lg:w-1/4 px-2">
+            <div
+              class="relative h-70 overflow-hidden rounded-lg cursor-pointer transition-transform duration-500 ease-out hover:scale-[1.02]">
+              <img src="assets/weather.webp" class="w-full h-full object-cover" alt="translation">
+              <div class="absolute inset-0 bg-linear-to-t from-black/80 to-transparent"></div>
+              <div class="absolute bottom-5 left-3 flex items-center gap-2
+                        bg-blue-900 px-2 h-6 rounded-sm text-white">
+                <span class="w-2 h-2 bg-white rounded-full"></span>
+                <span class="text-xs">Weather</span>
+              </div>
+            </div>
+            <h3 class="text-lg font-bold mt-2">
+              <span class="bg-[linear-gradient(currentColor,currentColor)]
+                  bg-no-repeat
+                  bg-size-[0%_2px]
+                  bg-position-[0_100%]
+                  hover:bg-size-[100%_2px]
+                  transition-[background-size]
+                  duration-500
+                  ease-out
+                  cursor-pointer">
+                Extreme Weather Can Change Your Travel Plans — Here’s How to Prepare</span>
+            </h3>
+            <div class="flex flex-wrap items-center gap-2 pt-3">
+              <img class="h-8 w-8 rounded-full shrink-0 object-cover" src="assets/Evelyn.jpg" alt="" />
+              <span class="text-xs text-gray-600">
+                by Evelyn Jenner
+              </span>
+              <span class="w-1 h-1 bg-gray-500 rounded-full"></span>
+              <span class="text-xs text-gray-500">
+                Jan 4 2025
+              </span>
+            </div>
+          </article>
+          <article class="shrink-0 w-full lg:w-1/4 px-2">
+            <div
+              class="relative h-70 overflow-hidden rounded-lg cursor-pointer transition-transform duration-500 ease-out hover:scale-[1.02]">
+              <img src="assets/translation.jpg" class="w-full h-full object-cover" alt="translation">
+              <div class="absolute inset-0 bg-linear-to-t from-black/80 to-transparent"></div>
+              <div class="absolute bottom-5 left-3 flex items-center gap-2
+                        bg-gray-700 px-2 h-6 rounded-sm text-white">
+                <span class="w-2 h-2 bg-white rounded-full"></span>
+                <span class="text-xs">Technology</span>
+              </div>
+            </div>
+            <h3 class="text-lg font-bold mt-2">
+              <span class="bg-[linear-gradient(currentColor,currentColor)]
+                  bg-no-repeat
+                  bg-size-[0%_2px]
+                  bg-position-[0_100%]
+                  hover:bg-size-[100%_2px]
+                  transition-[background-size]
+                  duration-500
+                  ease-out
+                  cursor-pointer">
+                Can’t Speak the Language? AI Translation Tools Are Changing Travel</span>
+            </h3>
+            <div class="flex flex-wrap items-center gap-2 pt-3">
+              <img class="h-8 w-8 rounded-full shrink-0 object-cover" src="assets/Ethan.jpg" alt="" />
+              <span class="text-xs text-gray-600">
+                by Ethan James
+              </span>
+              <span class="w-1 h-1 bg-gray-500 rounded-full"></span>
+              <span class="text-xs text-gray-500">
+                Oct 21 2025
+              </span>
+            </div>
+          </article>
+          <article class="shrink-0 w-full lg:w-1/4 px-2">
+            <div
+              class="relative h-70 overflow-hidden rounded-lg cursor-pointer transition-transform duration-500 ease-out hover:scale-[1.02]">
+              <img src="assets/remote.jpg" class="w-full h-full object-cover" alt="translation">
+              <div class="absolute inset-0 bg-linear-to-t from-black/80 to-transparent"></div>
+              <div class="absolute bottom-5 left-3 flex items-center gap-2
+                        bg-green-400 px-2 h-6 rounded-sm text-white">
+                <span class="w-2 h-2 bg-white rounded-full"></span>
+                <span class="text-xs">Escape</span>
+              </div>
+            </div>
+            <h3 class="text-lg font-bold mt-2">
+              <span class="bg-[linear-gradient(currentColor,currentColor)]
+                  bg-no-repeat
+                  bg-size-[0%_2px]
+                  bg-position-[0_100%]
+                  hover:bg-size-[100%_2px]
+                  transition-[background-size]
+                  duration-500
+                  ease-out
+                  cursor-pointer">
+                Travelers Are Trading Crowded Cities for Quiet Hidden Escapes in Remote Destinations</span>
+            </h3>
+            <div class="flex flex-wrap items-center gap-2 pt-3">
+              <img class="h-8 w-8 rounded-full shrink-0 object-cover" src="assets/Amelia.jpg" alt="" />
+              <span class="text-xs text-gray-600">
+                by Amelia Rose
+              </span>
+              <span class="w-1 h-1 bg-gray-500 rounded-full"></span>
+              <span class="text-xs text-gray-500">
+                Nov 13 2022
+              </span>
+            </div>
+          </article>
+          <article class="shrink-0 w-full lg:w-1/4 px-2">
+            <div
+              class="relative h-70 overflow-hidden rounded-lg cursor-pointer transition-transform duration-500 ease-out hover:scale-[1.02]">
+              <img src="assets/local-people.jpg" class="w-full h-full object-cover" alt="translation">
+              <div class="absolute inset-0 bg-linear-to-t from-black/80 to-transparent"></div>
+              <div class="absolute bottom-5 left-3 flex items-center gap-2
+                        bg-purple-600 px-2 h-6 rounded-sm text-white">
+                <span class="w-2 h-2 bg-white rounded-full"></span>
+                <span class="text-xs">Local People</span>
+              </div>
+            </div>
+            <h3 class="text-lg font-bold mt-2">
+              <span class="bg-[linear-gradient(currentColor,currentColor)]
+                  bg-no-repeat
+                  bg-size-[0%_2px]
+                  bg-position-[0_100%]
+                  hover:bg-size-[100%_2px]
+                  transition-[background-size]
+                  duration-500
+                  ease-out
+                  cursor-pointer">
+                Why Meeting Local People Is Becoming the Best Part of Traveling Around the World
+              </span>
+            </h3>
+            <div class="flex flex-wrap items-center gap-2 pt-3">
+              <img class="h-8 w-8 rounded-full shrink-0 object-cover" src="assets/Oliver.avif" alt="" />
+              <span class="text-xs text-gray-600">
+                by Oliver
+              </span>
+              <span class="w-1 h-1 bg-gray-500 rounded-full"></span>
+              <span class="text-xs text-gray-500">
+                July 30 2025
+              </span>
+            </div>
+          </article>
+        </div>
+        <button id="prevBtn" class="absolute left-2 top-[42%] -translate-y-1/2
+         z-10 w-10 h-10 rounded-full
+         bg-black/60 text-white
+         flex items-center justify-center
+         hover:bg-black/80">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <button id="nextBtn" class="absolute right-2 top-[42%]  -translate-y-1/2
+         z-10 w-10 h-10 rounded-full
+         bg-black/60 text-white
+         flex items-center justify-center
+         hover:bg-black/80">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+      </div>
+  </div>
+  <div class="bg-gray-950 w-full mt-8">
+    <div class="container mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-4">
+      <div class="flex flex-col md:flex-row items-start justify-between w-full py-10 px-4 gap-8">
+        <div class="flex items-center min-w-0">
+          <img src="assets/logo.webp" alt="TravelTales logo"
+            class=" invert w-16 h-16 sm:w-20 sm:h-20 object-contain shrink-0">
+          <span class="font-bold text-lg sm:text-2xl text-white whitespace-nowrap">
+            TravelTales
+          </span>
+        </div>
+        <div class="hidden md:block text-gray-400 text-sm leading-6">
+          Stories, guides, and inspiration from around the world.<br>
+          Discover new destinations, cultures, flavors, and experiences<br>
+          to inspire your next journey.
+        </div>
+        <div class="flex flex-col w-full sm:w-auto">
+          <div class="flex items-center border border-gray-700 rounded-lg px-4 py-1 w-full sm:w-70 bg-yellow-800">
+            <input type="email" placeholder="Enter your email"
+              class="w-full min-w-0 bg-transparent outline-none text-white placeholder:text-white text-sm">
+            <button
+              class="bg-yellow-950 text-white px-4 py-1 rounded-lg cursor-pointer hover:bg-yellow-900 text-sm whitespace-nowrap">
+              Subscribe
+            </button>
+          </div>
+          <div class="text-gray-400 text-left text-xs mt-2">
+            By subscribing you agree to our
+            <span class="underline hover:text-yellow-500 cursor-pointer">
+              privacy policy
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="border-b border-gray-800"></div>
+      <div class="px-4 md:px-4">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-10 w-full mt-5">
+          <div class="flex flex-col gap-2">
+            <div class="text-white text-sm font-bold mb-5">
+              Recent Post
+            </div>
+            <div class="flex items-center gap-2 bg-red-500 w-20 h-6 rounded-sm cursor-pointer hover:bg-red-600">
+              <span class="w-2 h-2 bg-white rounded-full ml-1"></span>
+              <span class="text-white text-xs">
+                Business
+              </span>
+            </div>
+            <div class="text-white text-xs font-bold">
+              Up-coming business bloggers,<br>
+              you need to watch
+            </div>
+            <div class="flex flex-row items-center gap-2">
+              <div class="text-white text-xs">
+                by William
+              </div>
+              <span class="w-1 h-1 bg-white rounded-full"></span>
+              <span class="text-white text-xs">
+                Oct 30 2023
+              </span>
+            </div>
+            <div class="flex items-center gap-2 bg-blue-500 w-20 h-6 rounded-sm mt-5 hover:bg-blue-700">
+              <span class="w-2 h-2 bg-white rounded-full ml-1"></span>
+              <span class="text-white text-xs">
+                Marketing
+              </span>
+            </div>
+            <div class="text-white text-xs font-bold">
+              How did we get here?<br>
+              The history of the business told through tweets
+            </div>
+            <div class="flex flex-row items-center gap-2">
+              <div class="text-white text-xs">
+                by Larry
+              </div>
+              <span class="w-1 h-1 bg-white rounded-full"></span>
+              <span class="text-white text-xs">
+                Nov 3 2023
+              </span>
+            </div>
+          </div>
+          <div class="flex flex-col gap-2">
+            <div class="text-white text-sm font-bold mb-5">
+              Navigation
+            </div>
+            <div class="common-clr">Features</div>
+            <div class="common-clr">Style Guide</div>
+            <div class="common-clr">Contact Us</div>
+            <div class="common-clr">Get Theme</div>
+            <div class="common-clr">Support</div>
+            <div class="common-clr">Privacy Policy</div>
+            <div class="common-clr">Newsletter</div>
+          </div>
+          <div class="flex flex-col gap-2 md:mt-11">
+            <div class="common-clr">News</div>
+            <div class="common-clr">Career</div>
+            <div class="common-clr">Technology</div>
+            <div class="common-clr">Startups</div>
+            <div class="common-clr">Gadgets</div>
+            <div class="common-clr">Inspiration</div>
+          </div>
+          <div class="flex flex-col gap-2">
+            <div class="text-white text-sm font-bold mb-5">
+              Get Regular Updates
+            </div>
+            <div class="flex flex-row gap-2 items-center">
+              <div class="w-4 h-5">
+                <img src="assets/wapp-icon.png" class="w-full h-full object-contain" alt="Whatsapp">
+              </div>
+              <div class="common-clr">Whatsapp</div>
+            </div>
+            <div class="flex flex-row gap-2 items-center">
+              <div class="w-4 h-5">
+                <img src="assets/insta-icon.png" class="w-full h-full object-contain" alt="Instagram">
+              </div>
+              <div class="common-clr">Instagram</div>
+            </div>
+            <div class="flex flex-row gap-2 items-center">
+              <div class="w-4 h-5">
+                <img src="assets/yt-icon.png" class="w-full h-full object-contain" alt="Youtube">
+              </div>
+              <div class="common-clr">Youtube</div>
+            </div>
+            <div class="flex flex-row gap-2 items-center">
+              <div class="w-4 h-5">
+                <img src="assets/twt-icon.png" class="w-full h-full object-contain" alt="Twitter">
+              </div>
+              <div class="common-clr">Twitter</div>
+            </div>
+            <div class="flex flex-row gap-2 items-center">
+              <div class="w-4 h-5">
+                <img src="assets/Headphone.png" class="w-full h-full object-contain" alt="Podcasts">
+              </div>
+              <div class="common-clr">Podcasts</div>
+            </div>
+          </div>
+          <div class="flex flex-col gap-4">
+            <div class="text-white text-xs font-bold">
+              Our Mobile App
+            </div>
+            <div class="text-white text-xs leading-5 mt-2">
+              Download our App and get the latest Breaking News
+              Alerts and latest headlines and daily articles near you.
+            </div>
+            <div class="flex flex-row gap-2">
+              <div class="w-20">
+                <img src="assets/appstore.png" class="w-full h-auto object-contain" alt="App Store">
+              </div>
+              <div class="w-20">
+                <img src="assets/googleplay.png" class="w-full h-auto object-contain" alt="Google Play">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col gap-3 mt-8 pb-5">
+          <div class="text-sm text-white font-bold">
+            What's Trending
+          </div>
+          <div class="text-xs text-white leading-5">
+            Travel · Food · Culture · Adventure · Photography · Nature ·
+            Wildlife · Beaches · Mountains · Heritage · Architecture ·
+            Festivals · Road Trips · Backpacking · Hidden Gems · Local
+            Life · Sustainable Travel · Travel Tips · Destinations ·
+            Exploration · History · Art · Lifestyle · Weekend Getaways
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
