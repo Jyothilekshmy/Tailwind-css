@@ -1,0 +1,8 @@
+@import "tailwindcss";
+
+@theme {
+  --font-caveat: "Caveat", cursive;
+}
+.common-clr {
+  @apply text-white text-xs hover:text-yellow-400 cursor-pointer;
+}
