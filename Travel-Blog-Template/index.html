@@ -31,70 +31,156 @@
       </button>
     </div>
   </div>
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <nav class="w-full bg-white border-b border-gray-100"></nav>
-    <div class="min-h-16 grid grid-cols-[minmax(0,1fr)_auto] md:grid-cols-[1fr_auto_1fr] items-center gap-2">
-      <div class="flex items-center min-w-0">
-        <img src="assets/logo.webp" alt="TravelTales logo" class="w-16 h-16 sm:w-20 sm:h-20 object-contain shrink-0">
-        <span id="blogName" class="font-bold text-lg sm:text-2xl text-blue-950 whitespace-nowrap">
-          TravelTales
-        </span>
-      </div>
-      <div class="hidden md:flex items-baseline justify-center gap-5 lg:gap-7">
-        <a href="#"
-          class="inline-flex items-baseline gap-1 text-sm font-medium text-gray-600 hover:text-blue-950 hover:font-bold whitespace-nowrap">
-          Home
-          <svg class="w-2.5 h-2.5 shrink-0" fill="currentColor" viewBox="0 0 20 20">
-            <path fill-rule="evenodd"
-              d="M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.168l3.71-3.938a.75.75 0 1 1 1.08 1.04l-4.25 4.51a.75.75 0 0 1-1.08 0l-4.25-4.51a.75.75 0 0 1 .02-1.06Z"
-              clip-rule="evenodd" />
-          </svg>
-        </a>
-        <a href="#"
-          class="inline-flex items-baseline gap-1 text-sm font-medium text-gray-600 hover:text-blue-950 hover:font-bold whitespace-nowrap">
-          Pages
-          <svg class="w-2.5 h-2.5 shrink-0" fill="currentColor" viewBox="0 0 20 20">
-            <path fill-rule="evenodd"
-              d="M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.168l3.71-3.938a.75.75 0 1 1 1.08 1.04l-4.25 4.51a.75.75 0 0 1-1.08 0l-4.25-4.51a.75.75 0 0 1 .02-1.06Z"
-              clip-rule="evenodd" />
-          </svg>
-        </a>
-        <a href="#"
-          class="inline-flex items-baseline gap-1 text-sm font-medium text-gray-600 hover:text-blue-950 hover:font-bold whitespace-nowrap">
-          Post
-          <svg class="w-2.5 h-2.5 shrink-0" fill="currentColor" viewBox="0 0 20 20">
-            <path fill-rule="evenodd"
-              d="M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.168l3.71-3.938a.75.75 0 1 1 1.08 1.04l-4.25 4.51a.75.75 0 0 1-1.08 0l-4.25-4.51a.75.75 0 0 1 .02-1.06Z"
-              clip-rule="evenodd" />
-          </svg>
-        </a>
-        <a href="#"
-          class="inline-flex items-baseline gap-1 text-sm font-medium text-gray-600 hover:text-blue-950 hover:font-bold whitespace-nowrap">
-          Lifestyle
-          <svg class="w-2.5 h-2.5 shrink-0" fill="currentColor" viewBox="0 0 20 20">
-            <path fill-rule="evenodd"
-              d="M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.168l3.71-3.938a.75.75 0 1 1 1.08 1.04l-4.25 4.51a.75.75 0 0 1-1.08 0l-4.25-4.51a.75.75 0 0 1 .02-1.06Z"
-              clip-rule="evenodd" />
-          </svg>
-        </a>
-        <a href="#"
-          class="inline-flex items-baseline gap-1 text-sm font-medium text-gray-600 hover:text-blue-950 hover:font-bold whitespace-nowrap">
-          Dashboard
-          <svg class="w-2.5 h-2.5 shrink-0" fill="currentColor" viewBox="0 0 20 20">
-            <path fill-rule="evenodd"
-              d="M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.168l3.71-3.938a.75.75 0 1 1 1.08 1.04l-4.25 4.51a.75.75 0 0 1-1.08 1.04l-4.25-4.51a.75.75 0 0 1 .02-1.06Z"
-              clip-rule="evenodd" />
-          </svg>
-        </a>
-      </div>
-      <div class="flex items-center justify-end gap-1 sm:gap-2 shrink-0">
-        <button class="hidden sm:block bg-red-600 hover:bg-red-700
+  <nav id="mainNav" class="sticky top-0 z-50 w-full bg-white border-b border-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="min-h-16 flex items-center justify-between gap-2">
+        <div class="flex items-center min-w-0">
+          <img src="assets/logo.webp" alt="TravelTales logo" class="w-16 h-16 sm:w-20 sm:h-20 object-contain shrink-0">
+          <span id="blogName" class="font-bold text-lg sm:text-2xl text-blue-950 whitespace-nowrap">
+            TravelTales
+          </span>
+        </div>
+        <div class="hidden lg:flex items-baseline justify-center gap-5 xl:gap-7">
+          <div class="relative group">
+            <a href="#" class="inline-flex items-baseline gap-1 text-sm font-medium text-gray-600
+           hover:text-blue-950 hover:font-bold whitespace-nowrap">
+              Home
+              <i class="fa-solid fa-chevron-down text-xs"></i>
+            </a>
+            <div class="absolute left-0 top-full w-52 bg-white rounded-lg
+              shadow-lg border border-gray-100 hidden group-hover:block
+              z-50 py-3">
+              <a href="#" class="block px-5 py-2.5 text-gray-600 hover:bg-sky-50 hover:text-blue-600">
+                Featured Posts
+              </a>
+              <a href="#" class="block px-5 py-2.5 text-gray-600 hover:bg-sky-50 hover:text-blue-600">
+                Popular Posts
+              </a>
+              <a href="#" class="block px-5 py-2.5 text-gray-600 hover:bg-sky-50 hover:text-blue-600">
+                Latest Posts
+              </a>
+            </div>
+          </div>
+          <div class="relative group">
+            <a href="#" class="inline-flex items-baseline gap-1 text-sm font-medium text-gray-600
+            hover:text-blue-950 hover:font-bold whitespace-nowrap">
+              Pages
+              <i class="fa-solid fa-chevron-down text-xs"></i>
+            </a>
+
+            <div class="absolute left-0 top-full  w-52 bg-white rounded-lg
+              shadow-lg border border-gray-100 hidden group-hover:block
+              z-50 py-3">
+              <a href="#" class="block px-5 py-2.5 text-gray-600 hover:bg-sky-50 hover:text-blue-600">
+                About Us
+              </a>
+              <a href="#" class="block px-5 py-2.5 text-gray-600 hover:bg-sky-50 hover:text-blue-600">
+                Contact
+              </a>
+              <a href="#" class="block px-5 py-2.5 text-gray-600 hover:bg-sky-50 hover:text-blue-600">
+                Gallery
+              </a>
+              <a href="#" class="block px-5 py-2.5 text-gray-600 hover:bg-sky-50 hover:text-blue-600">
+                FAQ
+              </a>
+            </div>
+          </div>
+          <div class="relative group">
+            <a href="#" class="inline-flex items-baseline gap-1 text-sm font-medium text-gray-600
+            hover:text-blue-950 hover:font-bold whitespace-nowrap">
+              Post
+              <i class="fa-solid fa-chevron-down text-xs"></i>
+            </a>
+            <div class="absolute left-0 top-full  w-80 bg-white rounded-lg
+              shadow-lg border border-gray-100 hidden group-hover:block
+              z-50 p-4">
+              <h3 class="text-lg font-bold mb-4">
+                Recent Posts
+              </h3>
+              <div class="flex flex-col gap-4">
+                <div class="flex items-center gap-3">
+                  <img src="assets/stay.jpg" alt="" class="w-16 h-16 object-cover rounded-lg shrink-0">
+                  <div class="min-w-0">
+                    <h4 class="text-sm font-bold leading-tight">
+                      <span class="text-gray-600 hover:bg-sky-50 hover:text-blue-600
+             transition-colors duration-200 cursor-pointer">
+                        How to Spot Fake Reviews Before Booking a Hotel
+                      </span>
+                    </h4>
+                  </div>
+                </div>
+                <div class="flex items-center gap-3">
+                  <img src="assets/city.jpg" alt="" class="w-16 h-16 object-cover rounded-lg shrink-0">
+                  <div class="min-w-0">
+                    <h4 class="text-sm font-bold leading-tight">
+                      <span class="text-gray-600 hover:bg-sky-50 hover:text-blue-600
+             transition-colors duration-200 cursor-pointer">
+                        Five Unbelievable Facts About Hidden European Cities
+                      </span>
+                    </h4>
+                  </div>
+                </div>
+                <div class="flex items-center gap-3">
+                  <img src="assets/chef.jpg" alt="" class="w-16 h-16 object-cover rounded-lg shrink-0">
+                  <div class="min-w-0">
+                    <h4 class="text-sm font-bold leading-tight">
+                      <span class="text-gray-600 hover:bg-sky-50 hover:text-blue-600
+             transition-colors duration-200 cursor-pointer">
+                        Five Dishes You Must Try Before Leaving Southeast Asia
+                      </span>
+                    </h4>
+                  </div>
+                </div>
+                <div class="flex items-center gap-3">
+                  <img src="assets/bussines.jpg" alt="" class="w-16 h-16 object-cover rounded-lg shrink-0">
+                  <div class="min-w-0">
+                    <h4 class="text-sm font-bold leading-tight">
+                      <span class="text-gray-600 hover:bg-sky-50 hover:text-blue-600
+             transition-colors duration-200 cursor-pointer">
+                        Inspiring Stories From Around
+                      </span>
+                    </h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="relative group">
+            <a href="#" class="inline-flex items-baseline gap-1 text-sm font-medium text-gray-600
+            hover:text-blue-950 hover:font-bold whitespace-nowrap">
+              Lifestyle
+              <i class="fa-solid fa-chevron-down text-xs"></i>
+            </a>
+            <div class="absolute left-0 top-full w-52 bg-white rounded-lg
+              shadow-lg border border-gray-100 hidden group-hover:block
+              z-50 py-3">
+              <a href="#" class="block px-5 py-2.5 text-gray-600 hover:bg-sky-50 hover:text-blue-600">
+                Food
+              </a>
+              <a href="#" class="block px-5 py-2.5 text-gray-600 hover:bg-sky-50 hover:text-blue-600">
+                Travel
+              </a>
+              <a href="#" class="block px-5 py-2.5 text-gray-600 hover:bg-sky-50 hover:text-blue-600">
+                Culture
+              </a>
+              <a href="#" class="block px-5 py-2.5 text-gray-600 hover:bg-sky-50 hover:text-blue-600">
+                Adventure
+              </a>
+            </div>
+          </div>
+          <a href="#"
+            class="inline-flex items-baseline gap-1 text-sm font-medium text-gray-600 hover:text-blue-950 hover:font-bold whitespace-nowrap">
+            Dashboard
+          </a>
+        </div>
+        <div class="flex items-center justify-end gap-1 sm:gap-2 shrink-0">
+          <button class="hidden sm:block bg-red-600 hover:bg-red-700
                  text-white text-sm font-medium
                  px-3 sm:px-4 py-2 rounded-lg transition">
-          Subscribe
-        </button>
-        <div class="relative flex items-center">
-          <input id="searchBar" type="text" placeholder="Search..." class="hidden w-36 sm:w-40 lg:w-48 h-9
+            Subscribe
+          </button>
+          <div class="relative flex items-center">
+            <input id="searchBar" type="text" placeholder="Search..." class="hidden w-36 sm:w-40 lg:w-48 h-9
                    px-4 pr-9
                    rounded-full
                    border border-gray-300
@@ -102,30 +188,178 @@
                    outline-none
                    focus:border-sky-500
                    focus:ring-2 focus:ring-sky-100">
-          <button id="searchBtn" class="p-2 rounded-lg hover:bg-gray-100 transition" aria-label="Search">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8"
-              stroke="currentColor" class="w-5 h-5">
-              <path stroke-linecap="round" stroke-linejoin="round"
-                d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 1 5.197 5.197a7.5 7.5 0 0 1 10.606 10.606Z" />
-            </svg>
-          </button>
-          <button id="closeSearch" class="hidden absolute right-2 p-1
+            <button id="searchBtn" class="p-2 rounded-lg hover:bg-gray-100 transition" aria-label="Search">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+            <button id="closeSearch" class="hidden absolute right-2 p-1
                    text-gray-500 hover:text-gray-900" aria-label="Close search">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div>
+          <button id="menuBtn" class="lg:hidden p-2 rounded-lg hover:bg-gray-100 transition" aria-label="Open menu">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id="mobileMenu" class="fixed inset-0 z-60 invisible opacity-0 transition-opacity duration-300 lg:hidden">
+      <div id="menuOverlay" class="absolute inset-0 bg-black/30">
+      </div>
+      <div id="menuPanel" class="absolute top-0 right-0 h-full w-[82%] max-w-sm
+           bg-white shadow-2xl
+           translate-x-full transition-transform duration-300 ease-out">
+        <div class="flex items-center justify-between h-16 px-5 border-b border-gray-100">
+          <span class="text-lg font-bold text-blue-950">
+            TravelTales
+          </span>
+          <button id="closeMenu" class="p-2 rounded-full text-gray-500
+               hover:bg-gray-100 hover:text-blue-950 transition" aria-label="Close menu">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8"
-              stroke="currentColor" class="w-4 h-4">
+              stroke="currentColor" class="w-6 h-6">
               <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
             </svg>
           </button>
         </div>
-        <button id="menuBtn" class="p-2 rounded-lg hover:bg-gray-100 transition" aria-label="Open menu">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-            stroke="currentColor" class="size-6">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5M12 17.25h8.25" />
-          </svg>
-        </button>
+        <nav class="px-5 py-4">
+          <div class="w-full">
+            <button id="mobileHomeBtn" class="w-full flex items-center justify-between
+                 px-3 py-2 rounded-lg text-gray-600
+                 hover:bg-sky-50 hover:text-blue-600
+                 transition-colors duration-200">
+              <span>Home</span>
+              <i class="fa-solid fa-chevron-down text-xs"></i>
+            </button>
+            <div id="mobileHomeDropdown" class="hidden pl-4">
+              <a href="#" class="block px-3 py-2 text-sm text-gray-600
+              hover:bg-sky-50 hover:text-blue-600
+              rounded-lg transition-colors duration-200">
+                Home
+              </a>
+              <a href="#" class="block px-3 py-2 text-sm text-gray-600
+              hover:bg-sky-50 hover:text-blue-600
+              rounded-lg transition-colors duration-200">
+                Destinations
+              </a>
+              <a href="#" class="block px-3 py-2 text-sm text-gray-600
+              hover:bg-sky-50 hover:text-blue-600
+              rounded-lg transition-colors duration-200">
+                Featured
+              </a>
+            </div>
+          </div>
+          <div class="w-full">
+            <button id="mobilePagesBtn" class="w-full flex items-center justify-between
+                 px-3 py-2 rounded-lg text-gray-600
+                 hover:bg-sky-50 hover:text-blue-600
+                 transition-colors duration-200">
+              <span>Pages</span>
+              <i class="fa-solid fa-chevron-down text-xs"></i>
+            </button>
+            <div id="mobilePagesDropdown" class="hidden pl-4">
+              <a href="#" class="block px-3 py-2 text-sm text-gray-600
+              hover:bg-sky-50 hover:text-blue-600
+              rounded-lg transition-colors duration-200">
+                About Us
+              </a>
+              <a href="#" class="block px-3 py-2 text-sm text-gray-600
+              hover:bg-sky-50 hover:text-blue-600
+              rounded-lg transition-colors duration-200">
+                Contact
+              </a>
+              <a href="#" class="block px-3 py-2 text-sm text-gray-600
+              hover:bg-sky-50 hover:text-blue-600
+              rounded-lg transition-colors duration-200">
+                Gallery
+              </a>
+              <a href="#" class="block px-3 py-2 text-sm text-gray-600
+              hover:bg-sky-50 hover:text-blue-600
+              rounded-lg transition-colors duration-200">
+                FAQ
+              </a>
+            </div>
+          </div>
+          <div class="w-full">
+            <button id="mobilePostBtn" class="w-full flex items-center justify-between
+                 px-3 py-2 rounded-lg text-gray-600
+                 hover:bg-sky-50 hover:text-blue-600
+                 transition-colors duration-200">
+              <span>Post</span>
+              <i class="fa-solid fa-chevron-down text-xs"></i>
+            </button>
+            <div id="mobilePostDropdown" class="hidden pl-4">
+              <div class="flex items-center gap-3 p-2 rounded-lg
+                hover:bg-sky-50 transition-colors duration-200 cursor-pointer">
+                <img src="assets/stay.jpg" class="w-14 h-14 object-cover rounded-lg shrink-0">
+                <span class="text-sm font-bold text-gray-600
+                   hover:text-blue-600">
+                  How to Spot Fake Reviews Before Booking a Hotel
+                </span>
+              </div>
+              <div class="flex items-center gap-3 p-2 rounded-lg
+                hover:bg-sky-50 transition-colors duration-200 cursor-pointer">
+                <img src="assets/city.jpg" class="w-14 h-14 object-cover rounded-lg shrink-0">
+                <span class="text-sm font-bold text-gray-600
+                   hover:text-blue-600">
+                  Five Unbelievable Facts About Hidden European Cities
+                </span>
+              </div>
+              <div class="flex items-center gap-3 p-2 rounded-lg
+                hover:bg-sky-50 transition-colors duration-200 cursor-pointer">
+                <img src="assets/chef.jpg" class="w-14 h-14 object-cover rounded-lg shrink-0">
+                <span class="text-sm font-bold text-gray-600
+                   hover:text-blue-600">
+                  Five Dishes You Must Try Before Leaving Southeast Asia
+                </span>
+              </div>
+              <div class="flex items-center gap-3 p-2 rounded-lg
+                hover:bg-sky-50 transition-colors duration-200 cursor-pointer">
+                <img src="assets/bussines.jpg" class="w-14 h-14 object-cover rounded-lg shrink-0">
+                <span class="text-sm font-bold text-gray-600
+                   hover:text-blue-600">
+                  Inspiring Stories From Around
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="w-full">
+            <button id="mobileLifestyleBtn" class="w-full flex items-center justify-between
+                 px-3 py-2 rounded-lg text-gray-600
+                 hover:bg-sky-50 hover:text-blue-600
+                 transition-colors duration-200 ">
+              <span>Lifestyle</span>
+              <i class="fa-solid fa-chevron-down text-xs"></i>
+            </button>
+            <div id="mobileLifestyleDropdown" class="hidden pl-4">
+              <a href="#" class="block px-3 py-2 text-sm text-gray-600
+              hover:bg-sky-50 hover:text-blue-600
+              rounded-lg transition-colors duration-200">
+                Food
+              </a>
+              <a href="#" class="block px-3 py-2 text-sm text-gray-600
+              hover:bg-sky-50 hover:text-blue-600
+              rounded-lg transition-colors duration-200">
+                Travel
+              </a>
+              <a href="#" class="block px-3 py-2 text-sm text-gray-600
+              hover:bg-sky-50 hover:text-blue-600
+              rounded-lg transition-colors duration-200">
+                Culture
+              </a>
+              <a href="#" class="block px-3 py-2 text-sm text-gray-600
+              hover:bg-sky-50 hover:text-blue-600
+              rounded-lg transition-colors duration-200">
+                Adventure
+              </a>
+            </div>
+          </div>
+          <a href="#" class="w-full flex items-center justify-between px-3 py-2 rounded-lg
+          text-gray-600 hover:bg-sky-50 hover:text-blue-600
+          transition-colors duration-200">
+            <span>Dashboard</span>
+          </a>
+        </nav>
       </div>
     </div>
-  </div>
   </nav>
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <nav class="w-full bg-sky-100 h-10 rounded-sm">
@@ -554,7 +788,8 @@
                   duration-500
                   ease-out
                   cursor-pointer">
-              Sipping Fire, The Secret Vineyards Growing in Volcanic Ash</span></h3>
+                Sipping Fire, The Secret Vineyards Growing in Volcanic Ash</span>
+            </h3>
             <p class="text-xs text-gray-500 mt-1">
               "On the stark island of Lanzarote, winemakers don't plant vines in traditional soil. Instead, they dig
               deep

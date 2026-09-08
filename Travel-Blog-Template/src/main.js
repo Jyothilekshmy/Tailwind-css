@@ -2,8 +2,6 @@ import './style.css'
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
 
-// ================= SEARCH =================
-const searchBtn = document.getElementById("searchBtn");
 const searchBar = document.getElementById("searchBar");
 const closeSearch = document.getElementById("closeSearch");
 const navLinks = document.getElementById("navLinks");
@@ -39,8 +37,6 @@ if (searchBtn && searchBar && closeSearch) {
 
 }
 
-
-// ================= TRENDING =================
 
 const trendingText = document.getElementById("trendingText");
 const prevTrending = document.getElementById("prevTrending");
@@ -95,8 +91,6 @@ if (prevTrending && nextTrending) {
 }
 
 
-// ================= MOBILE CATEGORY =================
-
 const downArrow = document.getElementById("downArrow");
 const topArrow = document.getElementById("topArrow");
 
@@ -127,7 +121,6 @@ if (
 
   });
 
-
   topArrow.addEventListener("click", () => {
 
     flora.classList.add("hidden");
@@ -142,43 +135,69 @@ if (
 
 }
 
-
-// ================= MOBILE MENU =================
-
 const menuBtn = document.getElementById("menuBtn");
 const mobileMenu = document.getElementById("mobileMenu");
+const menuPanel = document.getElementById("menuPanel");
 const closeMenu = document.getElementById("closeMenu");
+const menuOverlay = document.getElementById("menuOverlay");
 
+menuBtn.addEventListener("click", () => {
+  mobileMenu.classList.remove("invisible", "opacity-0");
+  mobileMenu.classList.add("opacity-100");
 
-if (menuBtn && mobileMenu) {
+  menuPanel.classList.remove("translate-x-full");
+  menuPanel.classList.add("translate-x-0");
 
-  menuBtn.addEventListener("click", () => {
+  menuBtn.classList.add("hidden");
+});
 
-    mobileMenu.classList.remove("hidden");
+const mobileHomeBtn = document.getElementById("mobileHomeBtn");
+const mobileHomeDropdown = document.getElementById("mobileHomeDropdown");
 
+if (mobileHomeBtn && mobileHomeDropdown) {
+  mobileHomeBtn.addEventListener("click", () => {
+    mobileHomeDropdown.classList.toggle("hidden");
   });
-
 }
 
+const mobilePagesBtn = document.getElementById("mobilePagesBtn");
+const mobilePagesDropdown = document.getElementById("mobilePagesDropdown");
 
-if (closeMenu && mobileMenu) {
-
-  closeMenu.addEventListener("click", () => {
-
-    mobileMenu.classList.add("hidden");
-
+if (mobilePagesBtn && mobilePagesDropdown) {
+  mobilePagesBtn.addEventListener("click", () => {
+    mobilePagesDropdown.classList.toggle("hidden");
   });
+}
+const mobilePostBtn = document.getElementById("mobilePostBtn");
+const mobilePostDropdown = document.getElementById("mobilePostDropdown");
 
+if (mobilePostBtn && mobilePostDropdown) {
+  mobilePostBtn.addEventListener("click", () => {
+    mobilePostDropdown.classList.toggle("hidden");
+  });
 }
 
+function closeMobileMenu() {
+  menuPanel.classList.remove("translate-x-0");
+  menuPanel.classList.add("translate-x-full");
 
-// ================= LOAD MORE POSTS =================
+  mobileMenu.classList.remove("opacity-100");
+  mobileMenu.classList.add("opacity-0");
+
+  menuBtn.classList.remove("hidden");
+
+  setTimeout(() => {
+    mobileMenu.classList.add("invisible");
+  }, 300);
+}
+
+closeMenu.addEventListener("click", closeMobileMenu);
+menuOverlay.addEventListener("click", closeMobileMenu);
 
 const loadMoreBtn = document.getElementById("loadMoreBtn");
 const morePosts = document.querySelectorAll(".more-post");
 const loadMoreText = document.getElementById("loadMoreText");
 const loadMoreIcon = document.getElementById("loadMoreIcon");
-
 
 if (loadMoreBtn && morePosts.length > 0) {
 
@@ -186,8 +205,6 @@ if (loadMoreBtn && morePosts.length > 0) {
 
     const isHidden = morePosts[0].classList.contains("hidden");
 
-
-    // Show / hide posts
     morePosts.forEach(function (post) {
 
       if (isHidden) {
@@ -202,8 +219,6 @@ if (loadMoreBtn && morePosts.length > 0) {
 
     });
 
-
-    // Change button text and icon
     if (isHidden) {
 
       loadMoreText.textContent = "View Less Posts";
@@ -228,14 +243,10 @@ const newsNextBtn = document.getElementById("nextBtn");
 const newsPrevBtn = document.getElementById("prevBtn");
 
 let isMoving = false;
-
-// Get how much one card should move
 function getMoveAmount() {
   return window.innerWidth >= 1024 ? 25 : 100;
 }
 
-
-// NEXT BUTTON
 newsNextBtn.addEventListener("click", () => {
 
   if (isMoving) return;
@@ -248,15 +259,9 @@ newsNextBtn.addEventListener("click", () => {
   newsCarousel.style.transform = `translateX(-${moveAmount}%)`;
 
   newsCarousel.addEventListener("transitionend", () => {
-
-    // Move first card to the end
     newsCarousel.appendChild(newsCarousel.firstElementChild);
-
-    // Reset without animation
     newsCarousel.style.transition = "none";
     newsCarousel.style.transform = "translateX(0)";
-
-    // Force browser to apply the reset
     newsCarousel.offsetHeight;
 
     isMoving = false;
@@ -266,7 +271,7 @@ newsNextBtn.addEventListener("click", () => {
 });
 
 
-// PREVIOUS BUTTON
+
 newsPrevBtn.addEventListener("click", () => {
 
   if (isMoving) return;
@@ -275,20 +280,20 @@ newsPrevBtn.addEventListener("click", () => {
 
   const moveAmount = getMoveAmount();
 
-  // Move last card to the beginning first
+  
   newsCarousel.style.transition = "none";
   newsCarousel.insertBefore(
     newsCarousel.lastElementChild,
     newsCarousel.firstElementChild
   );
 
-  // Start one card to the left
+  
   newsCarousel.style.transform = `translateX(-${moveAmount}%)`;
 
-  // Force browser to apply position
+  
   newsCarousel.offsetHeight;
 
-  // Smoothly move back to normal position
+  
   newsCarousel.style.transition = "transform 600ms ease-in-out";
   newsCarousel.style.transform = "translateX(0)";
 
