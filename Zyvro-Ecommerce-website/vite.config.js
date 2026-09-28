@@ -10,7 +10,7 @@ export default defineConfig({
       input: {
         main: resolve(__dirname, 'index.html'),
         shop: resolve(__dirname, 'shop.html'),
-        pdp: resolve(__dirname, 'pdp.html'),
+        product: resolve(__dirname, 'product.html'),
       },
     },
   },
